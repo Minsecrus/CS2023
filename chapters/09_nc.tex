@@ -1,0 +1,203 @@
+\chapter{网络与通信}
+
+\section{领域导言与演进背景}
+
+\begin{preamblebox}[知识领域概述与变革]
+计算机网络与现代通信技术是全球互联计算系统的核心中枢，深刻重构了数十亿人的生产与生活方式。从支撑数以亿计终端交互的公共互联网，到跨越全球版图的高性能专有云数据中心网络、内容分发网络（CDN）、近地低轨卫星宽带通信网，以及支撑物联网的近场终端自组织通信，现代网络架构正在朝着空天地海一体化、超低时延与智能化方向演进。
+
+\textbf{自 CS2013 以来的核心变革：}
+\begin{enumerate}
+    \item \textbf{核心层（计算机核心）范围系统性强化}：突破以往仅聚焦网络导论与上层应用的局限，将可靠传输协议机制、路由寻址与单跳信道通信的核心原理纳为必修基础。
+    \item \textbf{网络安全成为核心选修专章}：鉴于网络攻防与威胁态势的白热化，新增“网络安全”专有单元，覆盖零信任架构（ZTNA）、BGPsec 安全路由与加密信道。
+    \item \textbf{以“前沿新兴议题”取代陈旧模块}：移除过时的社交网络浅层单元，增设“新兴主题（Emerging 主题）”单元，全面涵盖软件定义网络（SDN）、数据中心网络虚拟化、网络中间件以及量子通信网络。
+\end{enumerate}
+\end{preamblebox}
+
+\section{核心学时分配建议}
+
+\begin{table*}[htbp]
+\centering\small
+\setlength{\tabcolsep}{2.5pt}\footnotesize\begin{tabularx}{0.88\textwidth}{Y c c}
+\toprule
+\textbf{知识单元} & \textbf{计算机核心} & \textbf{领域核心} \\
+\midrule
+网络导论与基本原理 & 3 & -- \\
+网络化应用与套接字编程 & 4 & -- \\
+可靠传输保障机制 & -- & 6 \\
+路由算法与分组转发机制 & -- & 4 \\
+单跳信道与局域通信 & -- & 3 \\
+移动通信与无线自组网 & -- & 4 \\
+现代网络空间安全 & -- & 3 \\
+网络新兴前沿与量子网络 & -- & 4 \\
+\midrule
+\textbf{合计} & \textbf{7 学时} & \textbf{24 学时} \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+\section{知识单元与详细大纲}
+
+\subsection{网络导论与系统架构}
+\textbf{【学时建议】}：3 计算机核心学时。
+
+\begin{itemize}
+    \item \textbf{现代计算中的网络地位与核心挑战}：全球异构互联、物理信道噪声、时延抖动与拥塞雪崩。
+    \item \textbf{互联网组织分层架构}：最终用户、互联网服务提供商（ISP，Tier~1/2/3 架构）、对等互联、自治系统（AS）、内容提供商与 CDN 节点分布。
+    \item \textbf{交换技术本质辨析}：电路交换与分组交换/包交换在统计复用、资源预留与传输延迟上的核心权衡。
+    \item \textbf{五层与七层协议模型}：物理层、数据链路层、网络层、传输层与应用层的职责边界；协议数据单元（PDU）封装与解封装流程。
+    \item \textbf{经典沙漏模型}：以 IP 协议为狭腰的核心设计哲学（End-to-End Principle 端到端原则）。
+    \item \textbf{网络基础设施核心网元}：路由器、交换机、集线器、无线接入点（AP）与终端主机。
+    \item \textbf{排队论与队列延迟直觉}：Little 定律直觉、排队延迟、丢包率与网络拥塞状态关联。
+\end{itemize}
+
+\subsection{网络化应用与套接字编程}
+\textbf{【学时建议】}：4 计算机核心学时。
+
+\begin{itemize}
+    \item \textbf{网络命名与编址体系}：域名系统（DNS，层次递归与迭代解析根服务器体系）、IP 地址分配与统一资源标识符（URI/URL）。
+    \item \textbf{分布式应用范式演进}：经典客户端/服务器（C/S）、对等计算（P2P）、云计算、边缘计算与雾计算。
+    \item \textbf{典型应用层协议剖析}：HTTP/1.1、HTTP/2、HTTP/3（基于 QUIC）、SMTP/POP3/IMAP 邮件协议。
+    \item \textbf{网络传输抽象与 Socket 编程接口}：流式套接字与数据报套接字、非阻塞 I/O 与并发网络服务器模型。
+\end{itemize}
+
+\subsection{可靠传输保障机制}
+\textbf{【学时建议】}：6 领域核心学时。
+
+\begin{itemize}
+    \item \textbf{不可靠底座与尽力而为模型}：UDP 报文格式及其在实时音视频、DNS 中的适用性。
+    \item \textbf{可靠数据传输协议原理}：差错检验（校验和 Checksum）、自动重传请求（ARQ）、停等协议、流水线协议（滑动窗口、回退 N 步 GBN、选择重传 SR）。
+    \item \textbf{TCP 协议核心机制全解}：三次握手与四次挥手状态机演进、SYN Flood 防范、时间戳与 TIME\_WAIT 状态管理。
+    \item \textbf{流量控制与拥塞控制 (Flow \& Congestion Control)}：
+    \begin{itemize}
+        \item 接收窗口 rwnd 与滑动窗口流量控制。
+        \item 拥塞窗口 cwnd 与经典拥塞控制算法：慢启动、拥塞避免、快重传与快恢复（TCP Reno、Cubic）。
+        \item 基于时延与带宽的拥塞控制（BBR 算法）。
+        \item QUIC 协议在现代 Web 传输中的革新（解决队头阻塞 Head-of-Line Blocking）。
+    \end{itemize}
+\end{itemize}
+
+\subsection{路由寻址与分组转发}
+\textbf{【学时建议】}：4 领域核心学时。
+
+\begin{itemize}
+    \item \textbf{控制平面与数据平面解耦}：转发表生成与硬件流水线匹配。
+    \item \textbf{分组转发机制}：最长前缀匹配（LPM）、三态内容寻址内存（TCAM）线速匹配。
+    \item \textbf{域内路由协议}：距离向量算法（Bellman-Ford、RIP）、链路状态算法（Dijkstra、OSPF）、分层 OSPF 区域规划。
+    \item \textbf{域间路由协议}：边界网关协议（BGP-4）、AS 路径属性、商业策略路由与路由振荡防范。
+    \item \textbf{IP 地址扩展与过渡技术}：无类别域间路由（CIDR）、网络地址转换（NAT/NAPT）、IPv6 报头设计与双栈/隧道过渡机制。
+\end{itemize}
+
+\subsection{单跳信道与局域通信}
+\textbf{【学时建议】}：3 领域核心学时。
+
+\begin{itemize}
+    \item \textbf{物理层基础}：信道带宽、奈奎斯特准则、香农定理、模拟调制与数字基带编码（曼彻斯特编码等）。
+    \item \textbf{成帧与差错控制}：帧同步定界、位填充法、循环冗余校验（CRC-32）数学推导。
+    \item \textbf{介质访问控制 (MAC)}：信道划分（FDMA、TDMA、CDMA）、随机访问（CSMA/CD、CSMA/CA 碰撞避免机制与指数退避算法）。
+    \item \textbf{现代以太网与二层交换}：以太网帧结构、MAC 地址学习与转发表自学习、生成树协议（STP）消除二层环路、虚拟局域网（VLAN 802.1Q）。
+    \item \textbf{现代数据中心网络拓扑}：Fat-Tree（胖树拓扑）、Spine-Leaf（脊叶架构）与无阻塞 ECMP 等价多路径路由。
+\end{itemize}
+
+\subsection{现代网络空间安全}
+\textbf{【学时建议】}：3 领域核心学时。
+
+\begin{itemize}
+    \item \textbf{网络威胁全景}：DDoS 分布式拒绝服务攻击、ARP 欺骗、DNS 投毒与劫持、BGP 路由劫持、中间人攻击（MITM）、流量嗅探与重放攻击。
+    \item \textbf{端到端与信道加密防御}：TLS 1.3 握手优化与证书信任链、IPsec 隧道/传输模式、虚拟专用网（VPN）。
+    \item \textbf{网络纵深防御架构}：防火墙（状态检测防火墙、下一代防火墙 NGFW）、DMZ 隔离区配置、入侵检测与防御系统（IDS/IPS）、零信任网络访问（ZTNA）。
+\end{itemize}
+
+\subsection{移动计算与无线自组网}
+\textbf{【学时建议】}：4 领域核心学时。
+
+\begin{itemize}
+    \item \textbf{蜂窝网络架构演进}：4G LTE 与 5G NR 核心网与无线接入网（RAN）解耦、网络切片。
+    \item \textbf{无线局域网}：IEEE 802.11 协议族（Wi-Fi 6/6E/7）、信标帧、关联握手、MIMO 与波束成形技术。
+    \item \textbf{多跳无线与自组网}：移动 Ad-hoc 网络（MANET）、车载自组网（VANET）、容迟网络（DTN）。
+\end{itemize}
+
+\subsection{前沿新兴议题}
+\textbf{【学时建议】}：4 领域核心学时。
+
+\begin{itemize}
+    \item \textbf{网络中间件深入}：深度报文检测（DPI）、硬件负载均衡（L4/L7）、透明代理与内容分发智能缓存。
+    \item \textbf{网络可编程与虚拟化}：软件定义网络（SDN，OpenFlow 与 P4 语言编程）、网络功能虚拟化（NFV）。
+    \item \textbf{量子网络初探}：量子隐形传态、量子密钥分发（QKD，如 BB84 协议）、量子中继与量子互联网愿景。
+\end{itemize}
+
+\section{专业素养与思维倾向}
+
+\begin{itemize}
+    \item \textbf{全局工程严谨性}：在网络拓扑设计与协议参数调优中洞察端到端各层级性能关联。
+    \item \textbf{敏锐的前瞻洞察力}：预判网络流量激增与突发拥塞，前瞻性部署弹性扩缩容与安全防御策略。
+    \item \textbf{协同协作能力}：与分布式系统、应用开发及运维安全团队紧密跨界协作。
+\end{itemize}
+
+\section{课程设计与教学实施建议}
+
+\begin{enumerate}
+    \item \textbf{导论型计算机网络课 (Introductory Course, 45 学时)}：覆盖网络导论（9h）、网络应用与 Socket 编程（12h）、传输层与 TCP（6h）、IP 路由（4h）、以太网链路（3h）、无线与安全入门。侧重网络应用开发与基本抓包实战（Wireshark）。
+    \item \textbf{高级进阶网络系统课 (Advanced Course, 45 学时)}：深入 BGP 与大规模路由（6h）、TCP 拥塞算法与 QUIC（8h）、数据中心 Spine-Leaf 与交换（5h）、移动蜂窝切片（5h）、零信任与网络攻防（5h）、SDN/P4 可编程数据平面（6h）。侧重协议设计与网络模拟实验（NS-3/Mininet）。
+\end{enumerate}
+
+\section{真实能力任务规范}
+
+\begin{taskbox}[任务 1：企业混合云多分支网络架构设计白皮书]
+\textbf{【任务情境】}：某跨国企业需在多地域分支机构、本地私有数据中心与公有云之间搭建安全、高可用且低时延的互联架构。\\
+\textbf{【能力陈述】}：梳理业务与安全边界需求，设计融合 SD-WAN、BGP 多归属选路、IPsec VPN 隧道与零信任访问机制的企业级网络方案，撰写技术白皮书。\\
+\textbf{【能力领域】}：系统架构 \quad \textbf{【能力单元】}：需求分析与方案设计\\
+\textbf{【达标等级】}：\textbf{评估与开发}
+\end{taskbox}
+
+\begin{taskbox}[任务 2：高并发微服务场景下的自研轻量可靠传输协议]
+\textbf{【任务情境】}：在跨机房弱网环境下开发高性能实时信令分发服务，原生 TCP 存在严重的队头阻塞，UDP 无法保障有序可靠性。\\
+\textbf{【能力陈述】}：基于 UDP 设计并实现一套轻量级可靠传输协议，融合滑动窗口重传、前向纠错码（FEC）与拥塞反馈调优机制，并通过网络丢包模拟测试验证吞吐性能。\\
+\textbf{【能力领域】}：系统与应用 \quad \textbf{【能力单元】}：协议研发与性能评测\\
+\textbf{【达标等级】}：\textbf{开发}
+\end{taskbox}
+
+\begin{taskbox}[任务 3：数据中心大规模网络灰度故障与抖动诊断分析]
+\textbf{【任务情境】}：生产环境数据中心遭遇隐蔽的“灰色故障”——交换机偶发微突发丢包未触发硬件告警，但导致分布式存储吞吐断崖式下跌。\\
+\textbf{【能力陈述】}：部署端到端主动探测探针、收集 INT（带内网络遥测）报文流，多维度关联分析吞吐量、RTT 抖动与队列深度，准确定位故障物理交换机与受损链路。\\
+\textbf{【能力领域】}：系统工程 \quad \textbf{【能力单元】}：系统监控与诊断评估\\
+\textbf{【达标等级】}：\textbf{评估}
+\end{taskbox}
+
+\section{附录：核心主题与技能要求等级对照表}
+
+\begin{longtable}{p{0.18\textwidth} p{0.48\textwidth} c c c}
+\toprule
+\textbf{知识单元} & \textbf{核心知识点与具体主题} & \textbf{认知等级} & \textbf{分类} & \textbf{学时} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{知识单元} & \textbf{核心知识点与具体主题} & \textbf{认知等级} & \textbf{分类} & \textbf{学时} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\multirow{2}{*}{\makecell[l]{网络通信/网络导论}} 
+& 分组交换与电路交换本质辨析、五层模型与沙漏原则 & 解释 & 计算机核心 & 2 \\
+& 自治系统 AS、ISP 架构与排队论核心概念 & 解释 & 计算机核心 & 1 \\
+\midrule
+\multirow{2}{*}{\makecell[l]{网络通信/网络化应用}} 
+& DNS 体系结构与解析机制、HTTP/2/3 协议规范 & 解释 & 计算机核心 & 2 \\
+& 套接字 Socket 编程接口、C/S 与 P2P 并发应用开发 & 应用 & 计算机核心 & 2 \\
+\midrule
+\multirow{3}{*}{\makecell[l]{网络通信/可靠传输}} 
+& rdt 原理、滑动窗口协议、GBN 与选择重传算法 & 解释 & 领域核心 & 2 \\
+& TCP 握手/挥手、状态机演变与重传定时器调优 & 应用 & 领域核心 & 2 \\
+& 拥塞控制原理与算法（Reno、Cubic、BBR）分析 & 评估 & 领域核心 & 2 \\
+\midrule
+\multirow{2}{*}{\makecell[l]{网络通信/路由与转发}} 
+& 最长前缀匹配算法、CIDR 与 NAT 转换机制 & 应用 & 领域核心 & 2 \\
+& 域内（OSPF）与域间（BGP-4）路由协议与策略控制 & 评估 & 领域核心 & 2 \\
+\midrule
+\multirow{2}{*}{\makecell[l]{网络通信/单跳通信}} 
+& 物理层香农定理、CSMA/CD 与 CSMA/CA 介质访问控制 & 解释 & 领域核心 & 2 \\
+& 以太网交换机自学习算法、VLAN 划分与数据中心胖树结构 & 应用 & 领域核心 & 1 \\
+\midrule
+\makecell[l]{网络通信/网络安全} & DDoS 攻击防御、TLS 1.3 握手认证、零信任架构配置 & 评估 & 领域核心 & 3 \\
+\midrule
+\makecell[l]{网络通信/前沿新兴} & 软件定义网络 SDN/P4 编程、网络切片与量子通信网络 & 解释 & 领域核心 & 4 \\
+\end{longtable}

@@ -1,0 +1,117 @@
+\chapter{计算机安全}
+
+\section{领域导言与演进背景}
+
+\begin{preamblebox}[知识领域概述与变革]
+现代社会对计算基础设施的依赖已深入交通运输、金融通信、医疗卫生、电网能源等国家级关键基础设施。近年来，针对这些关键基础设施的勒索攻击与灾难性数据泄露频发，这清晰地表明：当代计算机科学专业的毕业生必须承担起设计、构建与运维高韧性、内在安全且保护用户隐私的软件系统的重大责任。
+
+在 CS2023 体系中，“计算机安全 (SEC)”既是一个立足计算本质的独立知识领域，又代表着贯穿于全书所有知识领域（SDF、DM、OS、NC、PDC、SF、AI、SEP）的底层横切基石。安全思维必须深度内化为每一位毕业生的职业直觉。
+
+\textbf{自 CS2013 以来的核心变革：}
+\begin{enumerate}
+    \item \textbf{重命名与学科视角重塑}：将 CS2013 的“信息保障与安全 (IAS)”升级为“计算机安全”。面对网络空间安全已发展为独立学科（基于 CSEC 2017 规范）的现实，CS2023 聚焦于纯粹的\textbf{计算机科学视角}——侧重软件系统构建、底层架构防御、密码学原理与形式化安全验证。
+    \item \textbf{确立网络空间安全的六大核心跨界主题}：机密性、完整性、可用性、风险评估、系统性思维，以及最为核心的\textbf{对抗性思维}。
+    \item \textbf{安全内生与隐私设计原则}：系统化引入“设计即安全”、“设计即隐私”、“纵深防御”以及“安全保障”形式化评估体系。
+\end{enumerate}
+\end{preamblebox}
+
+\section{核心学时与跨领域映射}
+
+由于安全思维高度渗透在各个领域，SEC 领域的学时采用创新的“双轨制”统计：
+\begin{itemize}
+    \item \textbf{SEC 独立核心学时}：由本领域专设的《安全基石》所占用的基础学时（3 计算机核心 + 1 密码算法 计算机核心 = 4 计算机核心）。
+    \item \textbf{跨领域渗透学时}：已在其他 15 个 KA 中开设的安全专题（累计达 29 个跨界学时，下表中带括号展示）。
+\end{itemize}
+
+\begin{table*}[htbp]
+\centering\small
+\setlength{\tabcolsep}{2.5pt}\footnotesize\begin{tabularx}{0.88\textwidth}{Y c c}
+\toprule
+\textbf{知识单元} & \textbf{计算机核心} & \textbf{领域核心} \\
+\midrule
+安全基石与对抗思维 & 3 & -- \\
+算法与社会 / 基础密码学 & (2) + 1 & 5 \\
+计算机体系结构硬件安全 & 1 & 3 \\
+数据与数据库安全及审计 & (2) & 3 \\
+沉浸式与交互图形安全 & -- & 2 \\
+人本安全与可用性工程 & (1) & 2 \\
+数论与密码学数学理论 & (1) & (4) \\
+网络协议安全与零信任 & (1) & 2 \\
+操作系统内存防护与访问控制 & (3) & 4 \\
+并发竞态防御与分布式容错 & (3) & 2 \\
+隐私法理、安全策略与网络犯罪 & (4) & 4 \\
+软件防御性编程与安全重构 & (5) & 7 \\
+专用平台生态与系统沙箱隔离 & (4) & 6 \\
+\midrule
+\textbf{SEC 领域专设净核心学时} & \textbf{4 学时} & \textbf{45 学时} \\
+\textbf{全书贯穿安全总学时池} & \multicolumn{2}{c}{\textbf{33 CS 核心学时 + 45 领域核心学时}} \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+\section{核心知识单元大纲}
+
+\subsection{现代计算机安全基石}
+\textbf{【学时建议】}：3 计算机核心学时。
+
+\begin{itemize}
+    \item \textbf{网络安全跨界元模型}：CIA 三元组（机密性、完整性、可用性）、真实性、不可抵赖性；系统性思维与对抗性思维。
+    \item \textbf{威胁建模与攻击向量 (Threat Modeling \& Attack Vectors)}：STRIDE 威胁建模框架、攻击树、通用漏洞披露（CVE 与 CVSS 漏洞评分标准）。
+    \item \textbf{身份鉴别与访问控制 (AAA)}：多因素身份认证（MFA）、自主访问控制（DAC）、强制访问控制（MAC）、基于角色的访问控制（RBAC）与基于属性的访问控制（ABAC）。
+    \item \textbf{经典安全体系设计原则}：
+    \begin{itemize}
+        \item 最小特权原则。
+        \item 开放设计原则（Open Design / Kerckhoffs 原则：安全不应依赖隐匿）。
+        \item 故障安全默认与全景检查。
+        \item 纵深防御与隔离最小化机制。
+    \end{itemize}
+    \item \textbf{设计权衡冲突}：安全防护、用户隐私、执行性能与交互可用性之间的多维博弈与妥协。
+    \item \textbf{可信计算与安全保障}：可信基（TCB）、硬件信任根、形式化安全属性验证。
+\end{itemize}
+
+\subsubsection{示范性学习成果}
+\begin{enumerate}
+    \item \textbf{[解释]} 阐明最小特权原则、Kerckhoffs 原则以及对抗性思维在现代系统设计中的决定性价值。
+    \item \textbf{[开发]} 针对包含外部公开接口的网络服务，绘制 STRIDE 威胁模型图，设计兼顾纵深防御与访问控制的多层隔离架构。
+    \item \textbf{[评估]} 分析某历史重大安全事故（如 Log4j 漏洞或投毒供应链事件），评估其在认证、授权及输入验证阶段的失陷原因，提出系统化加固方案。
+\end{enumerate}
+
+\section{专业素养与思维倾向}
+
+\begin{itemize}
+    \item \textbf{极致细密与审慎性}：安全无小事。在真实攻击中，哪怕一行未校验的输入边界或配置疏漏都将导致整套防御全盘瓦解。
+    \item \textbf{自主追踪与终身学习}：黑客攻防对抗处于高度动态演进中，毕业生必须持续主动追踪最新零日漏洞与防御范式。
+    \item \textbf{协同作战能力}：面对突发高烈度网络渗透与勒索攻击，善于跨部门紧密联动以实现秒级应急响应。
+    \item \textbf{高度责任担当 (Responsible \& Accountable)}：对数据资产安全与公民个人隐私保持敬畏心，对编写的每一行代码承担伦理与工程责任。
+\end{itemize}
+
+\section{数学基础要求}
+
+\begin{itemize}
+    \item \textbf{离散结构与近世代数}：群论、有限域（Galois Field $GF(2^n)$ 在 AES 对称加密中的代数基础）。
+    \item \textbf{初等数论}：模幂运算、欧几里得扩展算法、费马小定理与欧拉函数（RSA 及椭圆曲线 ECC 基础）。
+    \item \textbf{概率论与数理统计}：生日碰撞概率（在哈希抗碰撞中的应用）、伪随机数生成器检验。
+\end{itemize}
+
+\section{课程设计与教学实施建议}
+
+联合工作组建议高校结合自身资源采取“双轨并行”方案：
+\begin{enumerate}
+    \item \textbf{全谱系渗透模式}：在不增设计算机安全必修课的前提下，必须强制要求所有专业核心课严格落实安全教学：在《数据库》中讲注入与列加密，在《操作系统》中讲提权与栈溢出防御，在《网络》中讲 TLS 与 BGP 劫持。
+    \item \textbf{独立综合课程模式}：开设一门 45 学时的《计算机系统安全与对抗工程》，集中讲授密码学工程应用、内存攻击防御（ASLR/DEP/ROP 链）、Web 全栈攻防、云原生与零信任网络。
+\end{enumerate}
+
+\section{真实能力任务规范}
+
+\begin{taskbox}[任务 1：核心业务系统全面威胁建模与对抗性渗透防御分析]
+\textbf{【任务情境】}：公司计划上线一套面向全球用户的开放金融开放平台 API 网关，面临复杂的外部黑客嗅探、重放与注入风险。\\
+\textbf{【能力陈述】}：运用对抗性思维与系统化威胁分析方法（STRIDE），对网关暴露的所有网络端点与消息载荷进行穿透式威胁建模，设计防重放令牌、非对称验签、基于角色的最小特权 RBAC 及敏感字段数据脱敏架构，并输出专业级系统安全防护白皮书。\\
+\textbf{【能力领域】}：软件工程与系统安全 \quad \textbf{【能力单元】}：系统设计与安全验证\\
+\textbf{【达标等级】}：\textbf{评估与开发}
+\end{taskbox}
+
+\section{委员会专家名单}
+\begin{itemize}
+    \item \textbf{主席}：Rajendra K. Raj (Rochester Institute of Technology)
+    \item \textbf{委员}：Vijay Anand (Univ. of Missouri-St. Louis)、Diana Burley (American Univ.)、Sherif Hazem (Central Bank of Egypt)、Michele Maasberg (US Naval Academy)、Sumita Mishra (RIT)、Nicolas Sklavos (Univ. of Patras)、Blair Taylor (Towson Univ.)、Jim Whitmore (Distinguished IT Architect)
+\end{itemize}

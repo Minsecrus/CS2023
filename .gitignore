@@ -1,0 +1,27 @@
+# LaTeX compilation artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex
+*.bbl
+*.blg
+*.xdv
+*.nav
+*.snm
+*.vrb
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.bak
+*~
+.vscode/
+.idea/
+
+# Keep the compiled release PDF
+!CS2023.pdf

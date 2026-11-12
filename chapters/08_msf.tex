@@ -1,0 +1,144 @@
+\chapter{数学与统计学基础}
+
+\section{领域导言与演进背景}
+
+\begin{preamblebox}[知识领域概述与变革]
+扎实的数学基础始终是计算机科学教育的基石。无论是理论还是应用领域——从算法设计、体系结构开发、物理世界建模到海量数据智能处理，数学形式化推理与数理分析均发挥着核心支撑作用。
+
+作为 ACM CS2013 大纲中“离散结构”的承继与升级版本，本知识领域（MSF）旨在系统界定支撑现代计算机科学所必需的现代数学与统计学知识矩阵。
+
+\textbf{自 CS2013 以来的核心变革：}
+\begin{enumerate}
+    \item \textbf{涵盖范围从离散数学走向现代连续数学}：CS2013 仅聚焦离散结构。随着人工智能、机器学习、机器人学、数据科学以及量子计算的爆发式增长，连续数学（微积分、多元优化、线性代数、连续概率与数理统计）已成为现代计算不可分割的基础。
+    \item \textbf{全球师生与产业界双向调研驱动}：针对近 600 位高校计算机教师与 680 位工业界一线研发人员的深入调研显示，行业对微积分基础、线性代数、概率论与统计学的重视程度跃升至前五位。
+    \item \textbf{正视学生数理准备度与课程衔接矛盾}：明确将初等代数与函数预备数学设为先修准入基准，倡导在计算机专业课中紧密结合具体编程案例来驱动数学概念传授，化解传统纯理论数学学习的脱节感。
+\end{enumerate}
+\end{preamblebox}
+
+\section{核心学时分配建议}
+
+\begin{table*}[htbp]
+\centering\small
+\setlength{\tabcolsep}{2.5pt}\footnotesize\begin{tabularx}{0.88\textwidth}{Y c c}
+\toprule
+\textbf{知识单元} & \textbf{计算机核心} & \textbf{领域核心} \\
+\midrule
+集合、关系与函数 & 4 & -- \\
+数理逻辑基础 & 9 & -- \\
+形式化证明技术 & 10 & 1 \\
+组合计数基础 & 5 & -- \\
+图与树的数学理论 & -- & 1 \\
+离散概率论 & 6 & 2 \\
+微积分与连续数学基础 & \emph{贯穿渗透} & 领域核心支撑 \\
+线性代数及其计算应用 & \emph{贯穿渗透} & 领域核心支撑 \\
+应用统计学基础 & \emph{贯穿渗透} & 领域核心支撑 \\
+\midrule
+\textbf{合计} & \textbf{34 学时} & \textbf{4+ 学时} \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+\section{知识单元与详细大纲}
+
+\subsection{微积分预备基础（先修准入要求）}
+本模块作为计算机专业入学数学素养基线，不计入大学核心学时，但属于必修前置依赖：
+\begin{itemize}
+    \item \textbf{代数基础}：分式化简、幂与指数运算法则、单变量/双变量一元二次方程组求解。
+    \item \textbf{函数分析}：函数形式化映射符号、单调性与函数图像性质。
+    \item \textbf{指数与对数}：自然指数、常用对数、对数换底公式及其函数渐变图谱。
+    \item \textbf{几何与三角学}：欧几里得空间距离度量、几何多边形特征、基本三角函数与单位圆。
+\end{itemize}
+
+\subsection{集合、关系与函数}
+\textbf{【学时建议】}：4 计算机核心学时。
+
+\begin{itemize}
+    \item \textbf{集合论基础}：韦恩图、集合交/并/补/差运算、笛卡尔积、幂集、有限集合基数。
+    \item \textbf{二元关系}：自反性、对称性、传递性、反对称性；等价关系与等价类划分；偏序关系与全序关系。
+    \item \textbf{函数映射理论}：单射、满射、双射；反函数存在条件与函数复合。
+\end{itemize}
+
+\subsubsection{示范性学习成果}
+\begin{enumerate}
+    \item \textbf{[解释]} 结合具体计算问题（如关系数据库键定义、哈希表映射），阐明集合、偏序关系与双射函数的形式化概念。
+    \item \textbf{[应用]} 熟练进行集合复合运算与关系性质验证，将真实系统的状态约束建模为等价类与偏序关系。
+\end{enumerate}
+
+\subsection{数理逻辑基础}
+\textbf{【学时建议】}：9 计算机核心学时。
+
+\begin{itemize}
+    \item \textbf{命题逻辑}：逻辑联结词（$\neg, \land, \lor, \to, \leftrightarrow$）、真值表计算、析取范式 (DNF) 与合取范式 (CNF) 转换、公式有效性判定。
+    \item \textbf{命题推理规则}：假言推理、拒取式、消解原理。
+    \item \textbf{一阶谓词逻辑}：个体词、谓词、全称量词 ($\forall$) 与存在量词 ($\exists$)、约束变元与自由变元、前束范式。
+    \item \textbf{形式逻辑的表达力极限}：命题逻辑与一阶逻辑的可判定性边界、表达力局限与不完备性概念。
+\end{itemize}
+
+\subsection{形式化证明技术}
+\textbf{【学时建议】}：10 计算机核心学时，1 领域核心学时。
+
+\begin{itemize}
+    \item \textbf{逻辑命题形态}：充分条件、必要条件、逆命题、否命题、逆否命题及其等价证明。
+    \item \textbf{直接证明与反例证伪 (Direct Proof \& Counterexamples)}：通用构造与奇偶性/整除性直接推演；通过最小反例推翻猜想。
+    \item \textbf{反证法}：归谬推演与素数无穷性反证经典范例。
+    \item \textbf{数学归纳法}：
+    \begin{itemize}
+        \item 自然数第一归纳法（弱归纳）与第二归纳法（强归纳）。
+        \item 结构归纳法：在递归定义数据结构（二叉树、表达式文法）上的性质验证。
+    \end{itemize}
+    \item \textbf{良序原理}：良序公理及其与超限归纳法、循环终止性证明的对应关系。
+\end{itemize}
+
+\subsection{组合计数基础}
+\textbf{【学时建议】}：5 计算机核心学时。
+
+\begin{itemize}
+    \item \textbf{基本计数原理}：加法原理、乘法原理、容斥原理、等差与等比级数求和。
+    \item \textbf{鸽巢原理}：经典形态与广义鸽巢原理在哈希冲突与图存在性中的严格证明。
+    \item \textbf{排列与组合}：二项式定理、帕斯卡恒等式（杨辉三角代数性质）、多重集合组合。
+    \item \textbf{递推关系式求解}：斐波那契数列生成函数、线性齐次与非齐次递推方程特征根法求解。
+    \item \textbf{初等同余与模算术}：同余类运算、欧拉定理、中国剩余定理基础。
+\end{itemize}
+
+\subsection{离散概率论}
+\textbf{【学时建议】}：6 计算机核心学时，2 领域核心学时。
+
+\begin{itemize}
+    \item \textbf{概率空间与公理化度量}：样本空间、随机事件、柯尔莫哥洛夫概率公理。
+    \item \textbf{条件概率与贝叶斯法则}：全概率公式、贝叶斯定理（Bayes' Theorem）及其在垃圾邮件过滤与分类决策中的应用。
+    \item \textbf{独立性与随机变量}：事件独立性、离散型随机变量分布律（伯努利分布、二项分布、几何分布）。
+    \item \textbf{期望与方差}：数学期望的线性性质（Linearity of Expectation，用于快速排序均摊复杂度推导）、方差与协方差、条件独立性。
+\end{itemize}
+
+\subsection{微积分、线性代数与统计学拓展}
+
+\subsubsection{微积分}
+极限与连续性；单变量微积分导数与链式法则；定积分与不定积分（在连续概率密度函数中的应用）；泰勒级数展开；多元微积分：偏导数、梯度向量、Hessian 矩阵、多元链式法则、凸优化理论与凸集判定、局部与全局极小值。
+
+\subsubsection{线性代数}
+矩阵与向量空间：矩阵线性方程组高斯消元法；向量组线性相关与线性无关、基与维数；正交投影、Gram-Schmidt 正交化、最小二乘法；特征值与特征向量、谱分解；计算机应用前沿：主成分分析 (PCA)、奇异值分解 (SVD)、PageRank 随机游走马尔可夫链稳态向量、三维图形学齐次坐标变换。
+
+\subsubsection{应用数理统计学}
+总体与样本、中心极限定理；点估计与区间估计（置信区间）；假设检验（$t$ 检验、卡方检验）；多元数据相关性分析与最小二乘回归；数据降维与平滑技术。
+
+\section{专业素养与思维倾向}
+
+\begin{itemize}
+    \item \textbf{一丝不苟的严谨态度}：在符号演算、边界条件界定与逻辑闭环构建中保持高度审慎。
+    \item \textbf{执着钻研的毅力}：面对抽象高深的数学定理与多步复杂推演，展现克服畏难情绪的坚韧品质。
+\end{itemize}
+
+\section{课程设计与教学实施建议}
+
+联合工作组建议各高校结合办学定位采取弹性课程组织策略：
+\begin{enumerate}
+    \item \textbf{经典开课模式}：由数学系开设微积分、线性代数、概率统计与离散数学四门标准课程（共约 16 学分）。
+    \item \textbf{现代“连续计算结构”整合课模式}：面向 AI 与数据时代，专门为计算机专业开设《连续数学基础》，融微积分梯度、多元凸优化、矩阵分解与统计学习于一体，通过 Python/NumPy 编程实战演示数学应用。
+    \item \textbf{专业课内嵌式“即时教学”模式}：在机器学习、计算机视觉或密码学课程的前两周专门开设数学微模块，消除学生对纯理论数学脱离应用的认知障碍。
+\end{enumerate}
+
+\section{委员会专家名单}
+\begin{itemize}
+    \item \textbf{主席}：Rahul Simha (George Washington University)
+    \item \textbf{委员}：Richard L. Blumenthal (Regis University)、Marc Deisenroth (University College London)、Michael Goldweber (Xavier University)、Cynthia Bailey Lee (Stanford University)、David Liben-Nowell (Carleton College)、Jodi Tims (Northeastern University)
+\end{itemize}

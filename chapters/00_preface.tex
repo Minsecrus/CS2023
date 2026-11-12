@@ -1,0 +1,115 @@
+\chapter{导言与总体框架}
+
+\section{CS2023 的研制背景与工作历程}
+
+\begin{preamblebox}[历史沿革与演进]
+半个多世纪以来，随着计算机科学学科的飞速发展与广泛渗透，国际权威计算学术组织不断更新计算机科学本科课程指导纲要：
+\begin{itemize}
+    \item \textbf{Curriculum 68}：50 多年前由美国计算机学会（ACM）发布的首部计算机科学本科课程规范指导。
+    \item \textbf{Curriculum 78}：对课程体系进行了系统性重构，首次确立了“核心课程”与“选修课程（选修）”的分类组织模式。
+    \item \textbf{Computing Curricula 1991 (CC1991)}：ACM 首次携手电气电子工程师学会计算机学会（IEEE-CS），联合研制了全新指导方针。
+    \item \textbf{Computing Curricula 2001 (CC2001)}：首次明确将关注点纯化为计算机科学本体，将计算机工程、软件工程等分支独立成各自专有的课程规范。
+    \item \textbf{Computer Science Curriculum 2008 (CS2008)}：作为对 CC2001 的阶段性重大修订版本。
+    \item \textbf{Computer Science Curricula 2013 (CS2013)}：ACM 与 IEEE-CS 联合发布的里程碑式规范，确立了三级认知层次与 Tier~1/Tier~2 核心学时划分。
+    \item \textbf{CS2023}：作为计算机科学课程体系的最新一代纲领性规范，由 ACM、IEEE-CS 联合发起，并首次正式吸纳国际人工智能促进协会（AAAI）作为共同主办单位。
+\end{itemize}
+\end{preamblebox}
+
+\subsection{联合工作组的建立与运作架构}
+ACM、IEEE-CS 与 AAAI 联合工作组组织架构如下：
+\begin{enumerate}
+    \item \textbf{指导委员会}：共 17 位领域权威专家，由 ACM 共同主席 Amruth N. Kumar 与 IEEE-CS 共同主席 Rajendra K. Raj 领衔，成员涵盖来自高校、工业界（如 Google 等）与专业教育委员会的代表。
+    \item \textbf{17 个知识领域专家委员会}：每个知识领域均由指导委员会成员带头，吸纳全球 5 至 10 位本领域的顶尖学者与行业专家组成。
+\end{enumerate}
+
+\subsection{研制原则}
+CS2023 工作组在研制过程中遵循以下五大核心原则：
+\begin{itemize}
+    \item \textbf{全球深度协作}：每个知识领域均由国际产学研联合委员会研制，汇聚多元学术视角与行业最新实践。
+    \item \textbf{持续同行评审}：每一版草案均由至少三位外部独立资深专家进行匿名评审。
+    \item \textbf{广泛社群参与}：通过十余个 ACM SIG 专委会、SIGCSE 年会等渠道面向全球计算机教育界征集反馈。
+    \item \textbf{实据驱动革新}：充分调研了全球各高校（包括美国本土与国际高校）以及 865 家工业界企业的反馈数据。
+    \item \textbf{全程透明公开}：通过官方平台面向公众开放全部过程文档与草案，吸纳全行业建设性意见。
+\end{itemize}
+
+\section{CS2023 的核心变革与重大创新}
+
+相较于 CS2013 及以往单纯以“知识模型”为主的框架，CS2023 引入了范式级的升级与扩充。
+
+\subsection{知识模型与能力模型的深度双轨融合}
+自 Curriculum 68 到 CS2013，计算机课程规范均属于经典的“知识模型”——自顶向下拆解为知识领域 (KA)、知识单元 (KU)与具体主题，并针对主题指定学习成果。
+
+随着国际工程教育对毕业生真实职业能力要求的提升，CC2020、IT2017 等前沿规范引入了“能力模型”。能力被严格定义为：\textbf{在具体任务情境中，融合应用知识、技能与专业素养特质的综合能力}。
+
+CS2023 并没有盲目废弃知识模型，而是创新性地实现了两者的双轨互补：
+\begin{itemize}
+    \item \textbf{知识模型面向教学组织}：为教师搭建系统、连贯、层次清晰的知识传授阶梯。
+    \item \textbf{能力模型面向产业实战}：以行业真实工程任务为牵引，反向推导培养学生所需的知识、技能与职业思维。
+\end{itemize}
+
+\subsection{知识领域的优化与重组}
+根据近十年来计算技术的巨变，CS2023 对各大知识领域进行了重大重命名与战略调整：
+\begin{table*}[htbp]
+\centering\small
+\begin{tabularx}{\textwidth}{lXl}
+\toprule
+\textbf{CS2013 领域名称} & \textbf{CS2023 领域名称} & \textbf{变革主旨说明} \\
+\midrule
+离散结构 & 数学与统计学基础 (\textbf{MSF}) & 强化概率、现代统计学及数据分析数学基础 \\
+图形学与可视化 & 图形学与交互技术 (\textbf{GIT}) & 涵盖现代实时渲染、XR 交互与沉浸式体验 \\
+信息保障与安全 & 计算机安全 (\textbf{SEC}) & 聚焦全栈安全防护、威胁建模与系统韧性 \\
+信息管理 & 数据管理与数据库 (\textbf{DM}) & 全面涵盖非关系型数据库、大数据处理管道与治理 \\
+智能系统 & 人工智能 (\textbf{AI}) & 全面拥抱深度学习、强化学习、大语言模型与伦理 \\
+基于平台的开发 & 专用平台开发 (\textbf{SPD}) & 涵盖移动端、云原生、物联网与嵌入式平台生态 \\
+编程语言 & 编程语言理论基础 (\textbf{FPL}) & 突出类型理论、形式化语义、并发语义基础 \\
+社会问题与专业实践 & 社会、伦理与专业素养 (\textbf{SEP}) & 提升至核心贯穿层面，各知识领域均增设 SEP \\
+计算科学 & \emph{移除独立 KA} & 其核心方法论下沉融入数学与算法交叉模块 \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+\subsection{社会与职业伦理全面渗透机制}
+在现代计算无处不在的今天，社会伦理不能再作为孤立的一门课程“轻描淡写”。CS2023 设立了革命性的要求：\textbf{全书所有知识领域均设立专有的 SEP 单元}，例如在算法中探讨“算法歧视与差分隐私”，在操作系统中探讨“隐私监控与资源隔离伦理”，在人工智能中深入“可解释性、对齐与公平性”。
+
+\subsection{对齐布鲁姆教育分类学的四级技能标准}
+CS2023 摒弃了过往模糊的 Familiarity/Usage/Assessment 分级，全面采用修订版布鲁姆认知目标分类学（Bloom's Taxonomy）：
+\begin{enumerate}
+    \item \textbf{解释}：识记与理解。行为动词包括：定义、描述、列举、辨析、阐述、总结。
+    \item \textbf{应用}：实操与执行。行为动词包括：计算、配置、调试、部署、实验、测量、测试、追踪、虚拟化。
+    \item \textbf{评估}：分析与评判。行为动词包括：比较、鉴别、归类、权衡、评审、防御、推荐、排序。
+    \item \textbf{开发}：综合与创造。行为动词包括：设计、构建、合成、组合、重构、开发、重构、生产。
+\end{enumerate}
+
+\subsection{核心学时与“向日葵模型”}
+CS2013 采用 Tier~1 (165学时) 与 Tier~2 (143学时) 的刚性要求，导致总核心学时逐年膨胀，给地方院校和新兴交叉学科带来巨大排课负担。
+
+CS2023 提出了兼具通用性与灵活度的\textbf{“向日葵”模型}：
+\begin{itemize}
+    \item \textbf{花盘中心：计算机核心}：所有受规范认可的计算机专业毕业生\textbf{必须百分之百掌握}的核心基础底座。
+    \item \textbf{花瓣外延：领域核心}：若高校根据自身办学特色开设某特定专业方向（如系统方向、应用方向、软件工程方向），则在涉猎该知识领域时需达成的深度核心标准。
+\end{itemize}
+这种设计允许高校在保障核心扎实的前提下，根据区域产业需求或办学特长，在某些“花瓣”上做深做强，而在其余花瓣保持基准，极大增强了教学弹性。
+
+\section{计算机专业毕业生核心素养画像}
+
+CS2023 指出，面对日新月异的技术变革，当代计算机科学本科毕业生应具备以下核心特质：
+\begin{itemize}
+    \item \textbf{算法问题求解能力}（Algorithmic Problem-solver）：能够在适宜的抽象层次上，针对常见问题设计良好的算法解决方案。
+    \item \textbf{合格的程序设计与实现能力}（Competent Programmer）：具备规范的代码编写、调试与重构能力，掌握基本软件工程原则。
+    \item \textbf{具备计算的心智模型}（Mental Model of Computation）：对计算机底层硬件、系统抽象及程序运行时机制具备清晰的认知与心智模型。
+    \item \textbf{终身学习与适应力}（Life-long Learner \& Adaptable）：面对快速涌现的新技术与不确定性，具备自主学习与适应新技术栈的能力。
+    \item \textbf{多层次抽象思维}（Think at Multiple Levels of Abstraction）：理解从微架构、指令集、操作系统到应用层及分布式系统的分层体系，具备跨层次分析与故障定位意识。
+    \item \textbf{对抗性思维与安全防范直觉}（Adversarial Thinker）：具备基本的系统安全性视角、防御意识与严密的逻辑分析能力。
+    \item \textbf{社会责任与伦理意识}（Socially Responsible \& Ethical Behavior）：理解代码与计算技术对社会、隐私、安全及伦理规范的现实影响，恪守职业准则。
+    \item \textbf{跨学科协作与有效沟通}（Collaborative \& Effective Communication）：能够理解非计算机学科的基本背景，与跨领域团队成员协作并清晰表达技术方案。
+\end{itemize}
+
+\section{高校计算机教育面临的时代挑战}
+
+报告深刻剖析了全球高校在推进计算机课程建设时普遍面临的严峻挑战：
+\begin{enumerate}
+    \item \textbf{生成式人工智能（AIGC）对编程教育的重构}：自动化代码生成工具对传统作业与考试评估机制带来根本性冲击，教育者亟需将 AI 深度融入核心教学并重构评价指标。
+    \item \textbf{生源暴增与师资供需失衡}：计算机专业学生人数持续爆发，师资招聘与留存成本高企。
+    \item \textbf{学科边界细分与碎片化挑战}：数据科学、人工智能、网络空间安全纷纷独立建院或设系，如何保持计算机大类核心基础的凝聚力成为课题。
+    \item \textbf{计算机通识教育需求膨胀}：如何为全校非计算机专业学生提供高质量、易吸收的现代计算思维教育。
+\end{enumerate}

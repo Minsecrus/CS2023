@@ -1,0 +1,214 @@
+% !TEX program = xelatex
+\documentclass[UTF8,a4paper,zihao=5,openany,twocolumn,fontset=windows]{ctexbook}
+
+% ==================== 页面边距与排版设置 ====================
+% 用户要求：双栏布局、9pt字号、7.5mm超窄边距、1.1行距、主要用宋体
+\usepackage{geometry}
+\geometry{
+    left=7.5mm,
+    right=7.5mm,
+    top=1.8cm,
+    bottom=1.8cm,
+    headheight=14pt,
+    headsep=10pt,
+    footskip=0.8cm,
+    columnsep=16pt
+}
+\let\cleardoublepage\clearpage
+
+% ==================== 字体与行距 ====================
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\setmonofont{Consolas}
+\linespread{1.1}
+
+% ==================== 常用数学与表格宏包 ====================
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{booktabs,longtable,tabularx,multirow,array}
+\usepackage{etoolbox}
+\usepackage{dblfloatfix}
+\usepackage{makecell}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+% 保证 longtable 在单栏全宽显示，结束后恢复双栏
+\BeforeBeginEnvironment{longtable}{\clearpage\onecolumn}
+\AfterEndEnvironment{longtable}{\clearpage\twocolumn}
+
+% 让目录保持双栏排版
+\makeatletter
+\patchcmd{\tableofcontents}{\@restonecoltrue\onecolumn}{\@restonecolfalse}{}{}
+\patchcmd{\tableofcontents}{\clearpage\if@restonecol\twocolumn\fi}{}{}{}
+\makeatother
+
+% ==================== 颜色与超链接 ====================
+\usepackage[table]{xcolor}
+\definecolor{primaryblue}{RGB}{20, 50, 95}
+\definecolor{deepcyan}{RGB}{0, 102, 128}
+\definecolor{darkgray}{RGB}{60, 60, 60}
+\definecolor{boxbg}{RGB}{245, 248, 253}
+\definecolor{boxframe}{RGB}{180, 205, 235}
+\definecolor{taskbg}{RGB}{250, 250, 252}
+\definecolor{taskframe}{RGB}{100, 140, 190}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=primaryblue,
+    citecolor=deepcyan,
+    urlcolor=primaryblue,
+    pdfauthor={ACM / IEEE-CS / AAAI Joint Task Force},
+    pdftitle={计算机科学课程体系规范 CS2023 (中文全译本)},
+    pdfsubject={Computer Science Curricula 2023 (Version Beta)},
+    pdfkeywords={CS2023, 计算机教育, 课程规范, ACM, IEEE-CS, AAAI}
+}
+
+% ==================== 页眉页脚 ====================
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\songti\small\textcolor{darkgray}{\thepage}}
+\fancyhead[LO]{\songti\small\textcolor{darkgray}{计算机科学课程大纲 CS2023（中文全译本）}}
+\fancyhead[RE]{\songti\small\textcolor{darkgray}{\leftmark}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% ==================== 列表紧凑化 ====================
+\usepackage{enumitem}
+\setlist{nosep, leftmargin=1.5em, labelsep=0.5em, itemsep=2pt, topsep=2pt}
+
+% ==================== 彩色卡片环境 ====================
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+
+% 序言与变革卡片
+\newtcolorbox{preamblebox}[1][]{
+    enhanced,
+    breakable,
+    colback=boxbg,
+    colframe=primaryblue,
+    arc=3pt,
+    boxrule=1pt,
+    left=8pt,
+    right=8pt,
+    top=6pt,
+    bottom=6pt,
+    fonttitle=\heiti\bfseries\fontsize{8pt}{9.6pt}\selectfont,
+    coltitle=white,
+    title=#1
+}
+
+% 真实能力任务卡片 (Competency Specification Task)
+\newtcolorbox{taskbox}[1][]{
+    enhanced,
+    colback=taskbg,
+    colframe=taskframe,
+    arc=2pt,
+    boxrule=0.8pt,
+    left=7pt,
+    right=7pt,
+    top=5pt,
+    bottom=5pt,
+    fonttitle=\heiti\bfseries\fontsize{8pt}{9.6pt}\selectfont,
+    coltitle=white,
+    title=#1
+}
+
+% 核心重点与技能提示盒
+\newtcolorbox{infobox}[1][]{
+    enhanced,
+    breakable,
+    colback=white,
+    colframe=deepcyan,
+    arc=2pt,
+    boxrule=0.8pt,
+    left=7pt,
+    right=7pt,
+    top=5pt,
+    bottom=5pt,
+    fonttitle=\heiti\bfseries\fontsize{8pt}{9.6pt}\selectfont,
+    coltitle=white,
+    title=#1
+}
+
+% ==================== 标题格式定制 ====================
+\ctexset{
+    chapter = {
+        format = \heiti\zihao{3}\bfseries\raggedright,
+        name = {第,章},
+        number = \arabic{chapter},
+        beforeskip = 12pt,
+        afterskip = 10pt
+    },
+    section = {
+        format = \heiti\zihao{4}\bfseries\raggedright,
+        beforeskip = 10pt,
+        afterskip = 5pt
+    },
+    subsection = {
+        format = \heiti\zihao{-4}\bfseries\raggedright,
+        beforeskip = 6pt,
+        afterskip = 3pt
+    },
+    subsubsection = {
+        format = \heiti\zihao{5}\bfseries\raggedright,
+        beforeskip = 5pt,
+        afterskip = 2pt
+    }
+}
+
+% ==================== 文档正文 ====================
+\begin{document}
+
+% 封面前置
+\begin{titlepage}
+    \centering
+    \vspace*{3cm}
+    {\zihao{-0}\bfseries\songti 计算机科学课程体系 2023\par}
+    \vspace{0.8cm}
+    {\zihao{2}\textbf{Computer Science Curricula 2023 (CS2023)}\par}
+    \vspace{2.5cm}
+    
+    {\zihao{4}\songti
+    \textbf{计算机课程联合工作组 编著}\par
+    \vspace{0.4cm}
+    美国计算机学会（ACM）\par
+    电气电子工程师学会计算机学会（IEEE-CS）\par
+    国际人工智能促进协会（AAAI）\par
+    }
+    
+    \vfill
+    
+    {\zihao{3}\songti\textbf{Minsecrus 译}\par}
+    \vspace*{3cm}
+\end{titlepage}
+
+\frontmatter
+\fontsize{8pt}{9.6pt}\selectfont
+\tableofcontents
+
+\mainmatter
+\fontsize{8pt}{9.6pt}\selectfont
+
+% 引入各章节
+\include{chapters/00_preface}
+\include{chapters/01_al}
+\include{chapters/02_ar}
+\include{chapters/03_ai}
+\include{chapters/04_dm}
+\include{chapters/05_fpl}
+\include{chapters/06_git}
+\include{chapters/07_hci}
+\include{chapters/08_msf}
+\include{chapters/09_nc}
+\include{chapters/10_os}
+\include{chapters/11_pdc}
+\include{chapters/12_sec}
+\include{chapters/13_sep}
+\include{chapters/14_sdf}
+\include{chapters/15_se}
+\include{chapters/16_spd}
+\include{chapters/17_sf}
+\include{chapters/18_curriculum}
+
+\end{document}
