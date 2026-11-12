@@ -54,28 +54,28 @@
 \textbf{【学时建议】}：2 计算机核心学时。
 
 \subsubsection{计算机核心主题}
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{操作系统作为软硬件中介}：操作系统作为通用底层物理硬件与特定领域应用软件之间的中介抽象层；通过标准应用程序接口（API）向上层软件提供统一的抽象虚拟机模型。
     \item \textbf{操作系统通用核心职能}：
-    \begin{itemize}
+    \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 交互与通信接口抽象（进程接口、用户命令行/图形界面、设备抽象文件接口等）。
         \item 面向特定应用软件的代码加载、地址空间创建与受控运行生命周期管理。
         \item 数据持久化存储管理与状态安全保障。
     \end{itemize}
     \item \textbf{扩展与专用操作系统职能}：
-    \begin{itemize}
+    \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 资源严苛环境下的嵌入式操作系统特殊机制。
         \item 面向高吞吐、高并发场景的专用服务器系统（文件存储服务器、Web 代理服务器、流媒体低时延服务器）。
         \item 系统引导加载程序与安全引导信任链机制。
     \end{itemize}
     \item \textbf{系统级设计权衡与冲突分析}：
-    \begin{itemize}
+    \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 效率、健壮性、灵活性、可移植性、安全性、向后兼容性、能耗预算以及人身与物理安全。
         \item 关键工程维度的两难权衡：深层边界错误检查与极致执行性能的冲突；高度模块化灵活性与执行性能开销的冲突；多层动态安全校验与系统访问时延的冲突。
     \end{itemize}
     \item \textbf{外部关键技术对操作系统的深远影响}：现代网络空间安全威胁、分布式与云计算架构、高通量多媒体流式计算、多核并行与异构计算协同。
     \item \textbf{安全与保护的全局贯穿性法则}：在操作系统软件栈的任何一个分层忽视安全，都将直接导致整机安全基准坍塌，从而为非法越权访问硬件资源洞开大门：
-    \begin{itemize}
+    \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 未加密硬盘介质在脱机移至其他物理主机后可被完全绕过权限直接读取。
         \item 在操作系统内核载入内存前，恶意固件代码渗透引导加载层可彻底颠覆内核安全体系。
         \item 系统 API 边界若缺乏严格细密的授权校验，将导致不同应用间的进程沙箱隔离失效。
@@ -83,7 +83,7 @@
 \end{itemize}
 
 \subsubsection{示范性学习成果与能力指标}
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{[解释] 理解目标与功能}：深刻阐明现代操作系统的根本设计目标及其支撑应用运转的三大核心虚拟化职能（计算、内存与外设）。
     \item \textbf{[评估] 多元场景架构权衡}：针对实时控制、智能手机移动端、云端高并发服务器等不同业务形态，严密权衡并评估操作系统在调度、内存管理与 I/O 上的设计分歧。
     \item \textbf{[解释] 便利性、效率与演进力}：全面分析当代操作系统在兼顾最终用户与开发者的交互便利性、底层硬件吞吐效率以及架构平滑演进能力上的实现路径。
@@ -94,9 +94,9 @@
 \textbf{【学时建议】}：2 计算机核心学时。
 
 \subsubsection{计算机核心主题}
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{操作系统软件架构范式演进}：
-    \begin{itemize}
+    \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 宏内核：高性能、紧密集成与模块间缺乏故障隔离边界的缺陷。
         \item 分层架构：各层自底向上单向依赖的高内聚与调用性能折损。
         \item 模块化动态加载内核：在保持宏内核高性能的同时实现按需动态扩展。
@@ -105,7 +105,7 @@
     \end{itemize}
     \item \textbf{核心系统级三大抽象}：进程（计算实体抽象）、地址空间与虚拟内存（存储资源抽象）、文件与 I/O 流（外设与通信管道抽象）。
     \item \textbf{系统调用与应用程序接口（API）}：
-    \begin{itemize}
+    \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 系统调用的本质：作为用户空间程序请求内核特权服务的受控入口。
         \item 高层任务通常需要内核底层多组细粒度系统调用的级联配合完成。
         \item 标准运行时 API（如 Win32、POSIX、Java Native Interface）的作用：屏蔽底层系统调用的繁琐细节与平台异构性，向上提供统一优雅的高级编程接口。
@@ -113,13 +113,13 @@
     \end{itemize}
     \item \textbf{硬件体系结构与操作系统协同演进的历史脉络}：双模式硬件支持、存储保护键、虚拟化扩展指令集对 OS 架构的深远驱动。
     \item \textbf{特权指令受控执行与资源保护}：
-    \begin{itemize}
+    \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 硬件强制保护某些特权机器指令（如修改页表寄存器、停机指令、屏蔽中断）。
         \item 严格禁止用户态应用任意访问非法物理内存地址或直接读写磁盘块物理扇区。
         \item 对协处理器、GPU、密码学加速芯片及高速网络接口卡进行受控保护与资源复用。
     \end{itemize}
     \item \textbf{硬件中断与异常处理机制}：
-    \begin{itemize}
+    \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 中断向量表（IVT）与中断服务例程（ISR）的硬件分发逻辑。
         \item 硬件可编程定时器中断：为抢占式调度器提供毫秒级时间片基准。
         \item 外设 I/O 中断：实现异步事件驱动，将等待数据的阻塞线程置入休眠等待队列，彻底消除 CPU 无谓轮询的能源与算力损耗。
@@ -129,7 +129,7 @@
 \end{itemize}
 
 \subsubsection{示范性学习成果与能力指标}
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{[解释] 软件架构对健壮性与可维护性的影响}：系统阐述宏内核、微内核、分层与独核等设计范式对操作系统抵御局部故障、热修补及长期工程维护的本质影响。
     \item \textbf{[解释] 系统调用分类与归纳}：熟练将系统调用按照功能维度（进程管理、文件操作、设备控制、状态查询、通信同步）进行精确分类。
     \item \textbf{[解释] 系统调用执行全流程追踪}：详述应用程序触发系统调用的完整软硬件协同过程（参数传递规范、陷阱门模式跃迁、内核栈切换、现场恢复）。
@@ -144,35 +144,35 @@
 \textbf{【学时建议】}：2 计算机核心学时，3 领域核心学时（另见附录）。
 
 \subsubsection{计算机核心主题}
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{并发视角下的线程抽象}：线程作为 CPU 调度的最小执行单元；共享所属进程的虚拟地址空间与代码段，拥有独立的程序计数器（PC）、寄存器上下文与调用栈。
     \item \textbf{竞态条件与临界区}：
-    \begin{itemize}
+    \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 竞态条件的成因：多执行流对共享可变状态的非原子并发访问。
         \item 临界区定义及其访问原则（互斥、有空让进、有限等待）。
         \item 屏蔽硬件中断在保护临界区时的有效性局限（仅适用于单核系统内核关键路径，严禁暴露至用户态，无法解决多核并发冲突）。
     \end{itemize}
     \item \textbf{死锁与饥饿现象}：死锁（多个执行流因互相持有对方所需资源且不释放而陷入永久阻塞）与饥饿（低优先级线程长期无法获取所需调度资源）的直观物理表现。
     \item \textbf{多处理器架构下的并发新挑战}：
-    \begin{itemize}
+    \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 自旋锁的适用场景与多核总线竞争开销。
         \item 内核代码的可重入性与多核内存模型乱序可见性问题。
     \end{itemize}
 \end{itemize}
 
 \subsubsection{领域核心主题}
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{线程管理全生命周期与数据结构}：线程的创建、就绪、运行、阻塞、终止状态机；线程控制块（TCB）的核心字段组成。
     \item \textbf{标准线程编程接口}：POSIX 线程标准的核心 API、系统级线程生命周期管控与线程池设计。
     \item \textbf{死锁理论形式化与综合治理}：
-    \begin{itemize}
+    \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 死锁产生的四大充分必要条件（Coffman 条件）：互斥条件、占有且等待、不可抢占、循环等待。
         \item 死锁预防（破坏四大必要条件之一，如按序申请资源消除环路）。
         \item 死锁避免（Dijkstra 银行家算法 Banker's Algorithm、系统安全状态判定）。
         \item 死锁检测与动态恢复（资源分配图 Resource Allocation Graph 的化简、死锁进程终止与资源回滚）。
     \end{itemize}
     \item \textbf{线程安全代码工程实现}：
-    \begin{itemize}
+    \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 互斥锁的加锁/解锁协议。
         \item 计数信号量与二进制信号量，Dijkstra P/V（wait/signal）操作规范。
         \item 条件变量机制（等待 wait、单播唤醒 signal、广播唤醒 broadcast）与规避伪唤醒的标准循环判断范式。
@@ -181,12 +181,12 @@
 \end{itemize}
 
 \subsubsection{选修与前沿拓展主题}
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{内核对象原子并发管理的高阶演进}：从粗粒度的大内核锁 (BKL)向细粒度锁的重构历史；免锁/无锁数据结构（Lock-free Queues、CAS 原子循环更新）；Linux 内核读-复制-更新机制在高并发只读场景下的无锁吞吐优势。
 \end{itemize}
 
 \subsubsection{示范性学习成果与能力指标}
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{[解释] 并发机制的双刃剑效应}：辩证阐述并发机制作为操作系统核心支撑在显著提升算力利用率与响应性能的同时，所引入的调试困难与竞态不确定性风险。
     \item \textbf{[解释] 体系结构与并发竞态根源}：深入阐明微观体系结构特征（指令乱序发射、多级高速缓存不一致、编译器指令重排）如何直接诱发高级软件层面的竞态条件。
     \item \textbf{[解释] 多核多处理器并发挑战}：剖析在 SMP 对称多处理器环境中，多核心并发争抢共享数据结构所引发的总线风暴与自旋锁性能雪崩。
@@ -199,14 +199,14 @@
 \textbf{【学时建议】}：1 计算机核心学时，3 领域核心学时（另见附录）。
 
 \subsubsection{领域核心主题}
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{调度策略与抢占模式}：
-    \begin{itemize}
+    \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 非抢占式调度：进程持续运行直至主动让出 CPU 或进入阻塞，实现简单但可能导致系统无响应。
         \item 抢占式调度：基于时钟中断或高优先级就绪事件强制剥夺当前 CPU 执行权，保障系统交互式响应与公平性。
     \end{itemize}
     \item \textbf{经典调度策略与算法族}：
-    \begin{itemize}
+    \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 先来先服务（FCFS）：实现直观，但易受“护航效应”影响导致平均等待时间恶化。
         \item 短作业优先：理论最优的平均等待时间，但存在长作业饥饿风险且需要预测执行时间。
         \item 静态与动态优先级调度：结合任务关键等级进行调度，需引入“老化”机制规避低优先级饥饿。
@@ -215,7 +215,7 @@
         \item 完全公平调度器 (CFS)：基于红黑树与虚拟运行时间度量的高性能公平调度。
     \end{itemize}
     \item \textbf{对称多处理（SMP）多核调度与缓存协同}：
-    \begin{itemize}
+    \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 处理器亲和性（Processor Affinity，软亲和性与硬亲和性）以最大限度复用 L1/L2 缓存。
         \item 多核负载均衡：任务推取与任务拉取对多核缓存一致性的扰动。
     \end{itemize}
@@ -223,13 +223,13 @@
 \end{itemize}
 
 \subsubsection{选修与前沿拓展主题}
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{能耗感知调度与绿色计算}：结合硬件动态电压频率调整（DVFS）与异构多核处理器拓扑（如 ARM big.LITTLE 大小核），按需迁移高算力与后台节能任务。
     \item \textbf{用户态协作调度与新型轻量化框架}：Linux futexes（快速用户空间互斥体）底层机制；Go 等现代语言运行时的 $M:N$ 协程调度与用户态调度技术。
 \end{itemize}
 
 \subsubsection{示范性学习成果与能力指标}
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{[评估] 调度算法量化对比}：在吞吐量、平均周转时间、就绪等待时间以及公平份额维度上，严谨量化对比 FCFS、SJF、RR、MLFQ 等抢占与非抢占算法的性能表现。
     \item \textbf{[解释] 调度策略与业务应用匹配}：准确建立不同调度算法（批处理吞吐优先、桌面交互时延敏感、服务器公平共享）与实际应用业务特征的映射关联。
     \item \textbf{[解释] 多级调度器体系分工}：深入阐明系统中高级调度（作业准入调度）、中级调度（内存对换交换调度）、低级调度（CPU 进程分派）及 I/O 调度的协同工作机制。
@@ -243,10 +243,10 @@
 \textbf{【学时建议】}：1 计算机核心学时，3 领域核心学时（另见附录）。
 
 \subsubsection{领域核心主题}
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{虚拟化视角下的进程与线程}：进程作为受操作系统保护的独立虚拟地址空间与资源分配容器；进程状态（新建、就绪、运行、阻塞、终止）及其状态迁移图；基于进程控制块（PCB）维护的完整执行上下文。
     \item \textbf{进程内存镜像与段布局剖析}：
-    \begin{itemize}
+    \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 代码段：存放可执行机器指令，通常设置为只读与共享。
         \item 数据段：已初始化的全局变量与静态变量。
         \item BSS 段：未初始化或初始化为零的全局与静态变量，在磁盘文件中仅占位，加载时由内核清零分配物理页。
@@ -255,14 +255,14 @@
         \item 内存映射区：用于加载动态共享库与 \texttt{mmap} 匿名/文件映射。
     \end{itemize}
     \item \textbf{可执行程序的构建、装载与动态链接}：
-    \begin{itemize}
+    \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 源代码经过预处理、编译、汇编生成目标文件（\texttt{.o}），经静态链接器或运行时动态链接器生成进程镜像的完整流水线。
         \item 现代可执行与可链接格式（ELF）的剖析：ELF 头部、程序头表、节区头表。
         \item 动态链接机制、位置无关代码（PIC）、全局偏移表（GOT）与过程链接表（PLT）的延迟绑定实现细节。
     \end{itemize}
     \item \textbf{分派与上下文切换机制}：分派器的工作逻辑；上下文切换中寄存器现场保存到内核栈、更新 PCB 状态、刷新内存管理单元（MMU）页表基址寄存器（CR3）及其引起的 TLB 缓存失效开销。
     \item \textbf{进程间通信机制（IPC）全谱系}：
-    \begin{itemize}
+    \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 共享内存：最高吞吐的 IPC 形式，需配合信号量进行同步。
         \item 消息传递：系统内核提供消息队列，实现解耦异步通信。
         \item 管道技术：匿名管道（Pipes，仅适用于父子亲缘进程）与命名管道（FIFO，支持无亲缘跨进程）。
@@ -272,7 +272,7 @@
 \end{itemize}
 
 \subsubsection{示范性学习成果与能力指标}
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{[解释] 进程控制权虚拟化}：阐述操作系统如何借助进程与线程抽象以及底层时间片并发调度，实现物理硬件 CPU 控制权的透明虚拟化。
     \item \textbf{[解释] 中断与上下文切换的底层作用}：深入阐明时钟中断、陷入异常、分派器以及上下文切换在维系多任务并发多道程序环境中的核心软硬件机制。
     \item \textbf{[解释] 任务状态迁移与内核数据结构}：熟练绘制进程状态迁移图，并详述操作系统内核中 PCB/TCB 链表、运行就绪队列与阻塞等待队列的组织管理机制。
@@ -286,16 +286,16 @@
 \textbf{【学时建议】}：2 计算机核心学时，4 领域核心学时（另见附录）。
 
 \subsubsection{领域核心主题}
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{物理内存与硬件地址转换机制}：物理寻址局限；内存管理单元（MMU）、基址/界限寄存器、重定位寄存器与页表基地址寄存器的硬件协同机制。
     \item \textbf{存储层次结构对操作系统策略的驱动}：
-    \begin{itemize}
+    \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 寄存器、L1/L2/L3 片上高速缓存、物理主存与外部持久化辅存的速度与容量金字塔。
         \item 针对现代多核系统的 CPU 亲和性调度与 Per-CPU 内存分配缓存，最大限度保证局部性并规避多核总线缓存一致性风暴。
     \end{itemize}
     \item \textbf{逻辑地址、物理地址与虚拟地址空间}：虚拟地址空间的本质；多进程各自拥有独立的平坦虚拟地址空间，通过页表实现非连续物理主存的透明映射与物理地址隔离。
     \item \textbf{分页机制与页面置换策略}：
-    \begin{itemize}
+    \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 虚拟页、物理页框、页表项（PTE，包含存在位、读写位、用户/内核位、脏位与访问位）。
         \item 多级页表与倒排页表；转换检测缓冲区（TLB）的高速地址转换缓存及其命中/缺页处理。
         \item 缺页中断处理全流程：从捕获硬件异常、陷入内核、自外存调入页面、更新 PTE 状态至重新执行发生缺页的指令。
@@ -303,7 +303,7 @@
         \item 页面分配策略与系统抖动/颠簸：颠簸的成因（多道程序度过高导致频繁缺页与磁盘 I/O 堵塞）；基于工作集模型与缺页率控制（PFF）的颠簸根治机制。
     \end{itemize}
     \item \textbf{内核与用户态高效内存分配技术}：
-    \begin{itemize}
+    \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 伙伴系统：解决外部碎片的大块物理内存分配算法。
         \item Slab / Slub 分配器：针对内核频繁申请释放的小型数据对象缓存池。
         \item 空闲链表、大小分级分配器（Size Classes，如 TCMalloc、Jemalloc 思想）。
@@ -311,7 +311,7 @@
     \end{itemize}
     \item \textbf{主存缓存与多核缓存一致性}：高速缓存映射策略（直接映射、组相联）、缓存行填充与写回策略对系统调用性能的影响。
     \item \textbf{内存管理中的系统安全与隔离机制}：
-    \begin{itemize}
+    \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 进程沙箱与页表级严格读/写/执行（R/W/X）权限位控制。
         \item 硬件不可执行位：杜绝栈注入代码的非法执行。
         \item 地址空间布局随机化（ASLR）：随机化栈、堆和库的基地址，显著提高返回导向编程（ROP）攻击的试错门槛。
@@ -319,12 +319,12 @@
 \end{itemize}
 
 \subsubsection{选修与前沿拓展主题}
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{虚拟内存硬件的高阶服务赋能}：利用页表中断与保护位实现写时复制（Copy-on-Write, COW，如 \texttt{fork()} 的极速派生）、内存映射文件（\texttt{mmap} 零拷贝 I/O）、脏页追踪、用户态缺页异常处理接口（\texttt{userfaultfd}）在分布式虚拟机迁移与垃圾回收中的前沿应用。
 \end{itemize}
 
 \subsubsection{示范性学习成果与能力指标}
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{[解释] 存储层次结构与成本-性能权衡}：详细阐明计算机存储体系各个层级的技术特征，并从系统工程角度论证容量、访问时延与制造成本之间的权衡规则。
     \item \textbf{[解释] 虚拟内存与分页机制原理}：高度总结虚拟内存结合底层分页机制实现物理主存弹性扩展、地址空间解耦与高效缓存的运行机理。
     \item \textbf{[评估] 存储容量与 CPU 性能协同权衡}：针对高负载计算环境，定量评估不同层级缓存容量与处理器主频对整体端到端计算吞吐的影响关系。
@@ -337,10 +337,10 @@
 \textbf{【学时建议】}：2 计算机核心学时，1 领域核心学时（另见附录）。
 
 \subsubsection{计算机核心主题}
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{操作系统安全机制全景概览}：操作系统作为安全信任根与参考监控器的核心地位；机密性、完整性与可用性（CIA 三元组）在系统资源调度中的具体体现。
     \item \textbf{典型对抗攻击与资源对抗}：
-    \begin{itemize}
+    \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 调度对抗与饥饿攻击（利用抢占与实时优先级耗尽系统算力）。
         \item 内存越权、特权提升与恶意拒绝服务。
     \end{itemize}
@@ -349,14 +349,14 @@
 \end{itemize}
 
 \subsubsection{领域核心主题}
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{策略与机制分离原则}：机制规定“如何做”（如内核提供支持访问控制的底层校验逻辑），策略规定“允许谁做什么”（如系统管理员配置的特定安全规则清单）。
     \item \textbf{体系结构级硬件安全设施}：
-    \begin{itemize}
+    \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 分级保护环：从 Multics 体系结构演化至现代 x86 的 Ring~0（内核态）、Ring~3（用户态）及支持硬件虚拟化的 Ring~-1（Hypervisor 根模式）。
     \end{itemize}
     \item \textbf{保护、访问控制与身份鉴别模型}：
-    \begin{itemize}
+    \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 访问控制矩阵模型。
         \item 访问控制列表（ACL）与基于权能的系统在微内核与现代操作系统中的工程落地。
         \item 多因子身份认证（MFA）在特权凭据授予中的防线作用。
@@ -364,7 +364,7 @@
 \end{itemize}
 
 \subsubsection{示范性学习成果与能力指标}
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{[解释] 安全保护机制的根本必要性}：阐明在现代多租户、多任务互联计算环境中，构建内生且不可旁路的操作系统安全保护机制的不可替代性。
     \item \textbf{[解释] 经典底层漏洞攻击向量剖析}：详细列举并深入剖析利用操作系统底层特权级漏洞进行渗透攻击的各类经典攻击向量。
     \item \textbf{[解释] 细粒度系统访问控制机制}：详述操作系统利用自主访问控制（DAC）、强制访问控制（MAC）与特权权能机制约束进程访问受限资源的具体途径。
@@ -375,35 +375,35 @@
 \textbf{【学时建议】}：1 计算机核心学时，2 领域核心学时（另见附录）。
 
 \subsubsection{领域核心主题}
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{I/O 数据缓冲技术与实现策略}：
-    \begin{itemize}
+    \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 缓解 CPU 极高计算速度与外设缓慢 I/O 数据传输之间的严重速度失配。
         \item 单缓冲、双缓冲（Double Buffering / Ping-Pong 缓冲）与内核循环环形缓冲区。
     \end{itemize}
     \item \textbf{设备控制机制与通信模式演进}：
-    \begin{itemize}
+    \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 程序直接控制（轮询 Polled I/O）：CPU 周期严重浪费。
         \item 中断驱动 I/O（Interrupt-Driven I/O）：异步事件驱动，但高频小包传输会诱发严重的中断风暴。
         \item 直接内存访问：DMA 控制器接管总线，直接在主存与设备缓冲区之间进行高速块数据传输，仅在整块传输结束时向 CPU 发出中断。
         \item 内存映射 I/O（MMIO）与端口独立编址 I/O（PMIO）的寻址差异；基于描述符环形队列的高性能 DMA 通信协议。
     \end{itemize}
     \item \textbf{持久化块存储设备介质演进与管理}：
-    \begin{itemize}
+    \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 机械硬盘（HDD）：磁头寻道时间、旋转延迟、扇区读写；传统磁盘调度算法（FCFS、SSTF 最短寻道优先、SCAN 电梯算法、C-SCAN 循环扫描算法）。
         \item 固态硬盘（SSD）：闪存物理特性（电荷捕获、只写一次、异地更新、整块擦除）；闪存转换层（FTL）、损耗均衡算法与操作系统 TRIM 块回收通知。
     \end{itemize}
 \end{itemize}
 
 \subsubsection{选修与前沿拓展主题}
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{统一设备模型与硬件抽象层（HAL）}：设备树规范、字符设备、块设备与网络套接字设备的接口统一化抽象。
     \item \textbf{现代设备驱动程序工程挑战}：内核态驱动的设计原则、并发竞态、内核死锁隐患与驱动隔离沙箱技术（用户态驱动框架 UIO/VFIO）。
     \item \textbf{设备底层通信容错与高可用重试}：PCIe 总线链路层重传校验与错误报告机制。
 \end{itemize}
 
 \subsubsection{示范性学习成果与能力指标}
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{[解释] 体系结构级设备控制与 OS 联动}：理解硬件设备控制器与接口协议（如 PCIe、NVMe）的微观运作，并将其与操作系统的 I/O 调度策略及中断例程紧密映射。
     \item \textbf{[解释] 操作系统分层 I/O 软件栈架构}：掌握操作系统设备管理分层模型（用户级 I/O 软件、设备独立性软件、设备驱动程序、中断处理程序、硬件控制器）。
     \item \textbf{[解释] 物理硬件与虚拟设备抽象映射}：深刻阐述操作系统如何将物理各异的异构硬件设备封装并抽象为标准的虚拟字符设备、块设备与套接字接口。
@@ -416,13 +416,13 @@
 \textbf{【学时建议】}：2 计算机核心学时，2 领域核心学时（另见附录）。
 
 \subsubsection{领域核心主题}
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{文件的本质概念与核心抽象}：文件作为线性逻辑地址空间的字节序列集合；文件数据（Data 内容）与文件元数据（Metadata，如 inode 中存储的大小、类型、所有者、创建时间、访问权限及数据块指针）；文件基本操作接口（\texttt{open}、\texttt{read}、\texttt{write}、\texttt{seek}、\texttt{close}）与打开模式（只读、只写、追加、独占创建）。
     \item \textbf{文件系统的挂载机制}：将独立存储设备上的文件系统层次结构接入操作系统的统一全局目录树，形成无缝文件命名空间。
     \item \textbf{文件访问权限控制}：POSIX 标准权限位（所有者、所属组、其他人的读/写/执行权限）、访问控制列表（ACL）在文件层级的细粒度授权。
     \item \textbf{文件共享与多进程并发安全}：硬链接（Hard Links，共享相同 inode）与符号链接/软链接（Symbolic Links，独立 inode 包含路径字符串）；跨进程并发读写与文件锁（File Locking，劝告锁 vs 强制锁）。
     \item \textbf{文件块物理分配经典策略}：
-    \begin{itemize}
+    \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 连续分配：顺序读写极速，但易产生严重外部碎片且文件难以动态扩充。
         \item 链式分配：消除外部碎片，但随机寻道性能低下且指针断裂易损坏文件；显式链表文件分配表（FAT）思想。
         \item 索引分配：为每个文件配置索引节点；经典 UNIX 多级混合索引（直接指针块、一级间接块、二级间接块、三级间接块）的地址寻址极限。
@@ -434,7 +434,7 @@
 \end{itemize}
 
 \subsubsection{示范性学习成果与能力指标}
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{[解释] 文件系统底层架构设计决策}：深入阐明在设计底层文件系统时，在寻道时延、磁盘利用率、元数据开销与故障恢复速度之间面临的根本设计决策。
     \item \textbf{[评估] 多元文件分配机制全面对比}：严格对比连续分配、链式分配与多级索引分配在顺序读写、随机点查、动态扩容及容错韧性上的优势与劣势。
     \item \textbf{[应用] 面向文件系统特性的高效 I/O 编程}：基于对块缓冲、预读机制及延迟写特性的深刻理解，编写出高吞吐且兼顾断电安全的应用层 I/O 软件。
@@ -444,28 +444,28 @@
 \textbf{【学时建议】}：2 领域核心学时。
 
 \subsubsection{领域核心主题}
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{现代磁盘管理与虚拟文件系统（VFS）}：磁盘分区表（GPT/MBR）、逻辑卷管理（LVM）；虚拟文件系统（VFS）核心抽象架构：超级块对象、inode 对象、dentry 目录项对象与文件对象（\texttt{file\_operations} 虚函数指针表），向下统一纳管各类异构文件系统。
     \item \textbf{企业级文件系统前沿技术}：Ext4、XFS、ZFS 与 Btrfs 等现代文件系统的核心架构与高并发读写特性。
     \item \textbf{内存映射文件（mmap）机制}：将磁盘文件块直接映射至进程虚拟地址空间，读写文件转化为直接内存访问，消除系统调用与双重内核缓冲拷贝开销，支持多进程高效共享大文件。
     \item \textbf{特殊用途与虚拟伪文件系统}：\texttt{procfs}（暴露内核运行期数据结构与进程树）、\texttt{sysfs}（统一设备模型导出）、\texttt{tmpfs}/\texttt{ramfs}（高速纯内存文件系统）。
     \item \textbf{高级检索、加密与定期快照}：元数据快速索引、快照生成与异地灾备备份机制。
     \item \textbf{日志型与写时复制文件系统}：
-    \begin{itemize}
+    \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 日志型文件系统：预写式日志（WAL）机制；元数据日志与完整数据日志在崩溃一致性与吞吐量上的权衡。
         \item 日志结构文件系统与写时复制（COW）存储架构：所有更新以连续追加方式写入新位置，天然杜绝就地覆写引发的数据不一致，大幅提升随机写性能。
     \end{itemize}
 \end{itemize}
 
 \subsubsection{选修与前沿拓展主题}
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{分布式文件系统与现代存储架构}：网络附加存储（NAS）、存储区域网络（SAN）；主流网络文件系统协议（NFS、SMB/CIFS）；超大规模分布式文件系统（Ceph、HDFS、Google GFS）；云原生对象存储体系（OSS / S3）。
     \item \textbf{全盘与文件级透明加解密技术}：静态数据安全防护。
     \item \textbf{崩溃一致性与应用层持久化保障}：\texttt{fsync()}、\texttt{fdatasync()} 屏障语义；现代 ACID 关系型数据库底层引擎对操作系统刷盘保障的深层依赖。
 \end{itemize}
 
 \subsubsection{示范性学习成果与能力指标}
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{[解释] 硬件介质演进对文件系统的重构}：阐明高速非易失性介质（如 NVMe SSD、持久内存 PMEM）的发展如何颠覆性改变了文件系统的设计重心（从磁头寻道优化转向低锁争用与 CPU 周期节省）。
     \item \textbf{[应用] 文件系统多层映射与全景调用}：熟练将上层抽象的 POSIX 文件 API 逐步映射追踪至 VFS 抽象层、具体文件系统驱动、通用块层直至物理控制器设备驱动。
     \item \textbf{[解释] 挂载体系分类与应用实践}：清晰识别并归类本地分区挂载、网络远程挂载、回环设备挂载以及容器只读分层挂载的底层区别。
@@ -480,12 +480,12 @@
 \textbf{【学时建议】}：3 领域核心学时。
 
 \subsubsection{领域核心主题}
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{虚拟化与隔离的系统目标}：通过逻辑抽象将单台物理服务器划分为多个相互隔离的运行环境，实现强安全防护、动态资源分配与可预测的服务质量。
     \item \textbf{高级分页与二级内存虚拟化}：虚拟内存之上的再次虚拟化；传统纯软件影子页表的维护开销；现代硬件辅助二级地址转换（SLAT，如 Intel EPT、AMD NPT）的硬件级地址翻译流水线。
     \item \textbf{虚拟文件系统与虚拟设备抽象}：虚拟外设的仿真机制；标准化半虚拟化驱动框架在网络与块设备 I/O 中的低开销透传。
     \item \textbf{操作系统级轻量虚拟化——容器技术}：
-    \begin{itemize}
+    \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 容器相较于虚拟机的本质差异：共享宿主机操作系统内核，无需全量 Guest OS 仿真。
         \item Linux 命名空间：PID 进程隔离、Mount 挂载点隔离、IPC 进程间通信隔离、Net 网络栈隔离、User 用户特权隔离与 UTS 主机名隔离。
         \item Linux 控制组：实现容器对 CPU 核心份额、物理内存上限、块 I/O 读写带宽等资源的硬性限制与精细审计。
@@ -495,20 +495,20 @@
 \end{itemize}
 
 \subsubsection{选修与前沿拓展主题}
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{虚拟化技术分型全景}：硬件指令集纯仿真、硬件辅助全虚拟化、半虚拟化、操作系统级容器、服务与网络虚拟化（NFV）。
     \item \textbf{可移植虚拟化；指令级仿真与轻量隔离的对比}：指令仿真（如 QEMU 跨架构仿真）的高昂动态二进制翻译开销与内核隔离（如 Docker 容器）的原生性能对比。
     \item \textbf{虚拟化的系统级性能损耗剖析}：VM-Exit / VM-Entry 上下文切换开销、跨层 TLB 刷新与虚拟中断注入时延。
     \item \textbf{虚拟机逃逸与容器安全挑战}：Hypervisor 漏洞引发的虚拟机逃逸；容器共享内核导致的安全漏洞渗透宿主机威胁。
     \item \textbf{虚拟机监控器分类与架构}：
-    \begin{itemize}
+    \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item Type-1（裸金属型）：直接掌控裸机硬件，无独立宿主操作系统（如 VMware ESXi、Xen）。
         \item Type-2（宿主型）：依托宿主内核调度提供虚拟化支持（如 QEMU/KVM、VirtualBox）。
     \end{itemize}
 \end{itemize}
 
 \subsubsection{示范性学习成果与能力指标}
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{[解释] 硬件虚拟化扩展指令集支持}：深入阐明现代 CPU 硬件体系（如 Intel VT-x、AMD-V）如何通过根模式与非根模式为虚拟机提供硬件级提速与特权安全隔离。
     \item \textbf{[解释] 指令仿真与内核级隔离本质差异}：严格区分基于动态二进制翻译的指令级仿真与基于内核命名空间/控制组的轻量化隔离在运行机制与性能上的鸿沟。
     \item \textbf{[评估] 虚拟化架构全方位权衡选型}：针对云计算中心与边缘部署场景，客观评估裸金属虚机、宿主虚机与微服务轻量容器在资源利用率、部署弹性、隔离安全性与启动延迟上的全景得失。
@@ -519,22 +519,22 @@
 \textbf{【学时建议】}：2 领域核心学时。
 
 \subsubsection{领域核心主题}
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{实时多任务模型与确定性调度}：实时系统核心目标是满足严格的时间约束；时钟驱动调度、优先级驱动调度；最坏情况执行时间（WCET）与确定性响应度量。
     \item \textbf{截止时间约束与实时性挑战}：任务释放时间、截止时间、时延抖动对工业控制回路稳定性的决定性作用。
     \item \textbf{硬实时与软实时系统的本质分水岭}：
-    \begin{itemize}
+    \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 硬实时：错过截止时间即判定为系统灾难性崩溃（如航空航天机载飞行控制、汽车防抱死制动系统 ABS）。
         \item 软实时：错过截止时间仅表现为服务质量退化或用户体验下降，系统仍可继续运行（如音视频流式多媒体通信、低延迟在线竞技游戏）。
     \end{itemize}
 \end{itemize}
 
 \subsubsection{选修与前沿拓展主题}
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{实时环境下的内存与存储管理}：严禁不可预测的动态内存碎片化分配；页内存常驻物理内存锁定（\texttt{mlock}）以彻底消除缺页中断时延抖动。
     \item \textbf{系统瞬时故障、风险评估与确定性自愈恢复}：故障安全与高确定性降级运行模式。
     \item \textbf{安全攸关实时系统的核心陷阱与对策}：
-    \begin{itemize}
+    \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 优先级翻转现象剖析（火星探路者号经典案例）。
         \item 优先级继承协议 (PIP)与优先级天花板协议 (PCP)。
         \item 硬件看门狗定时器的自动超时重置与防死机机制。
@@ -542,7 +542,7 @@
 \end{itemize}
 
 \subsubsection{示范性学习成果与能力指标}
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{[解释] 实时操作系统的根本特征}：明确界定实时操作系统（RTOS）的根本特征：时间确定性与计算可预测性高于平均峰值吞吐量。
     \item \textbf{[解释] 软件时延来源与抖动分析}：深入剖析现代软件系统全链路中的延迟来源（中断屏蔽、关调度、锁竞争、内存缺页、Cache 未命中）及其长尾分布特征。
     \item \textbf{[解释] 实时系统特殊风险与对策}：系统阐述安全攸关实时系统面临的物理风险与优先级翻转隐患，并说明优先级继承协议的化解原理。
@@ -553,15 +553,15 @@
 \textbf{【学时建议】}：3 领域核心学时。
 
 \subsubsection{领域核心主题}
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{高可靠与高可用系统度量体系}：
-    \begin{itemize}
+    \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 可靠性：平均无故障时间（MTBF）。
         \item 可用性：系统正常运行时间占比（如“五个九”$99.999\%$ 可用度，年宕机时间小于 5.26 分钟）。
         \item 平均修复时间（MTTR）的系统级优化。
     \end{itemize}
     \item \textbf{软硬件协同容错技术——RAID 阵列详解}：
-    \begin{itemize}
+    \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 廉价磁盘冗余阵列（RAID）各级别机制：
         \item RAID 0：纯数据条带化，提升读写吞吐，无容错能力。
         \item RAID 1：磁盘镜像，完全空间冗余，高容错但磁盘利用率仅 $50\%$。
@@ -572,7 +572,7 @@
 \end{itemize}
 
 \subsubsection{选修与前沿拓展主题}
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{系统冗余设计三元方法论}：空间冗余（双机热备、三模冗余 TMR 多数表决）、时间冗余（异常指令/事务超时重试）与信息冗余（纠错码 ECC）。
     \item \textbf{硬件瞬态错误检测与在线纠错}：ECC 易失性内存单比特翻转自动纠错与双比特报错；针对磁盘静默数据破坏的端到端数据校验和机制。
     \item \textbf{文件系统一致性审计与修复}：\texttt{fsck} 工具的离线扫描与日志重放恢复原则。
@@ -581,7 +581,7 @@
 \end{itemize}
 
 \subsubsection{示范性学习成果与能力指标}
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{[解释] 操作系统支撑容错与高可用的途径}：阐述操作系统如何通过内核基础设施、驱动隔离与状态持久化机制，为上层应用提供坚固的容错底座。
     \item \textbf{[解释] 容错实现技术方法谱系}：系统总结并分类在操作系统软硬件各层级中实现容错的经典技术手段。
     \item \textbf{[解释] 局部故障下的连续不间断服务}：深入分析在面临物理磁盘损坏、主存局部错误或外设断开等局部软硬件故障时，操作系统如何维持核心服务连续在线。
@@ -593,22 +593,22 @@
 \textbf{【学时建议】}：4 领域核心学时。
 
 \subsubsection{领域核心主题}
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{操作系统领域的开源生态演进}：
-    \begin{itemize}
+    \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 开源操作系统内核（如 Linux Kernel）的代码审查、协作漏洞挖掘、协同负责任披露与全球补丁分发网络。
         \item 开源客户机操作系统与开源宿主机操作系统的协同繁荣。
         \item 商业化盈利模式的历史演化：从传统盒装软件授权许可，走向订阅技术支持、开源核心与云原生托管服务。
     \end{itemize}
     \item \textbf{操作系统生命周期终结 (EOL)的社会隐患}：
-    \begin{itemize}
+    \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 停服弃用老旧系统停发安全补丁所带来的系统性安全脆弱性。
         \item 交通基础设施、医疗设备与工业控制系统因历史技术债务继续依赖 EOL 操作系统所引发的公共安全与伦理风险。
     \end{itemize}
 \end{itemize}
 
 \subsubsection{示范性学习成果与能力指标}
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{[解释] 开源内核协同安全审计的利弊}：辩证评估在开源操作系统内核中公开发现与修复漏洞的双重效应（代码透明带来的全球白帽安全强化 vs 零日攻击窗口期被恶意利用）。
     \item \textbf{[解释] Linux 开源生态的全球历史影响}：结合计算机产业演进脉络，客观评价 Linux 等开源操作系统对全球互联网基础设施与云计算现代化的革命性推动作用。
     \item \textbf{[解释] 依赖超期退役操作系统的社会风险}：详尽剖析银行金融、医疗健康等公共关键基础设施长期依赖超期操作系统（如 Windows XP/7、旧版 Linux）所引发的法律、经济与伦理危机。
@@ -617,16 +617,16 @@
 
 \section{专业素养与思维倾向}
 
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{责任担当}：对系统底层架构设计、特权模式配置、并发锁协议以及资源调度策略的决策后果保持高度负责的工程敬畏心，深切认识到内核级哪怕微小缺陷都将引发整机崩溃或系统级严重安全失陷。
     \item \textbf{极致严谨}：在涉及系统级或高性能软件项目研发中，极其审慎细密地考量操作系统微观机制（如虚拟内存缺页、硬件中断延迟、上下文切换开销、锁竞争与内存屏障）对宏观业务软件表现的深刻连锁影响。
 \end{itemize}
 
 \section{数学基础要求}
 
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{必修数学素养}：离散数学
-    \begin{itemize}
+    \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 集合论与二元关系（用于形式化建模用户访问控制矩阵与进程资源所有权）。
         \item 图论基础（资源分配图 Resource Allocation Graph 构建、有向图环路检测算法在死锁判定中的核心应用）。
         \item 布尔代数与数理逻辑（硬件保护掩码、权限位运算、状态判断逻辑）。
@@ -636,7 +636,7 @@
 \section{交叉主题与跨学科共享概念}
 
 操作系统作为底层系统软件的中枢，与计算机学科多个知识领域存在高度的横向交叉渗透：
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{安全与保护} $\longleftrightarrow$ 计算机安全 (SEC)：内存越权防护、特权级最小化原则。
     \item \textbf{分布式文件系统} $\longleftrightarrow$ 网络与通信 (NC)：远程存储调用、网络块设备与网络延迟处理。
     \item \textbf{进程、线程与虚拟化映射} $\longleftrightarrow$ 计算机体系结构与组织 (AR)：硬件特权模式、寄存器现场与多线程硬件支持。
@@ -678,7 +678,7 @@
 
 联合工作组建议高校面向计算机专业本科生开设为期一学期的《操作系统导论》主干专业必修课（建议理论授课约 37$\sim$48 学时，并配套不少于 32 学时的上机系统级实验）：
 
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{操作系统的角色与目标}：3 讲授学时。
     \item \textbf{操作系统原理与体系架构}：3 讲授学时。
     \item \textbf{并发与同步机制}：7 讲授学时（含多线程编程、死锁算法与无锁机制）。
@@ -696,7 +696,7 @@
 \end{itemize}
 
 \noindent\textbf{先修课程准入依赖（来自计算机体系结构 AR 领域）：}
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item 汇编语言与机器组织
     \item 内存管理硬件基础
     \item 软件可靠性与硬件容错
@@ -707,12 +707,13 @@
 \noindent\textbf{课程终结综合能力养成指标：}\\
 修读完本课程的学生，应能深刻理解操作系统在处理器、内存、外设资源管理中的微观工作机制及其在性能吞吐与系统安全上的深刻权衡；能够熟练、安全、无死锁地设计与实现多进程/多线程并发控制与通信模块；能够客观评估并选型开源或专有操作系统方案；能够深刻掌握系统虚拟化、轻量容器与沙箱隔离技术作为现代安全操作系统基石的核心价值与实践部署方法。
 
+\newpage
 \section{指导委员会工作组成员}
 
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item \textbf{主席}：Monica D. Anderson (阿拉巴马大学，University of Alabama, Tuscaloosa, AL, USA)
     \item \textbf{委员}：
-    \begin{itemize}
+    \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item Renzo Davoli (意大利博洛尼亚大学，University of Bologna, Italy)
         \item Avi Silberschatz (美国耶鲁大学，Yale University, USA，《Operating System Concepts》作者)
         \item Marcelo Pias (巴西里奥格兰德联邦大学，Federal University of Rio Grande - FURG, Brazil)
@@ -721,10 +722,11 @@
     \end{itemize}
 \end{itemize}
 
-\clearpage
-\onecolumn
+\begin{strip}
 \section{附录：核心主题与技能要求等级对照表}
 
+\begingroup
+\zihao{-5}\renewcommand{\arraystretch}{0.86}\setlength{\tabcolsep}{3pt}
 \noindent\begin{tabularx}{\textwidth}{p{0.20\textwidth} Y c c c}
 \toprule
 \textbf{知识单元} & \textbf{核心知识点与具体主题} & \textbf{认知等级} & \textbf{分类} & \textbf{学时} \\
@@ -783,16 +785,16 @@
 & 虚拟化与隔离服务质量；二级内存虚拟化硬件加速（EPT/NPT）；Virtio & 解释 & 领域核心 & \multirow{2}{*}{2} \\
 & 虚拟化过度承诺下的颠簸；轻量化容器底层技术（Linux Namespaces 与 cgroups） & 解释 & 领域核心 & \\
 \midrule
-\multirow{1}{*}{\makecell[l]{操作系统/实时与\\嵌入式系统}} 
+\makecell[l]{操作系统/实时与\\嵌入式系统} 
 & 实时多任务模型、截止时间约束、抖动；硬实时与软实时系统的本质分水岭 [跨界 PL] & 解释 & 领域核心 & 1 \\
 \midrule
-\multirow{1}{*}{\makecell[l]{操作系统/系统容错与\\高可用性}} 
+\makecell[l]{操作系统/系统容错\\与高可用性} 
 & 高可靠（MTBF）与高可用（$99.999\%$）系统设计原理；RAID 0/1/5/6/10 机制详解 & 解释 & 领域核心 & 1 \\
 \midrule
-\multirow{2}{*}{\makecell[l]{操作系统/社会、伦理与\\专业素养议题}} 
+\multirow{2}{*}{\makecell[l]{操作系统/社会伦理\\与专业素养议题}} 
 & 开源操作系统生态演化、内核协同漏洞披露与打补丁机制；商业模式演进 & 解释 & 领域核心 & \multirow{2}{*}{4} \\
 & 停服弃用与老旧系统过生命周期（EOL）引发的社会风险 [跨界 SE] & 解释 & 领域核心 & \\
 \bottomrule
 \end{tabularx}
-\clearpage
-\twocolumn
+\endgroup
+\end{strip}
