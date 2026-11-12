@@ -725,17 +725,10 @@
 \onecolumn
 \section{附录：核心主题与技能要求等级对照表}
 
-\begin{longtable}{p{0.20\textwidth} p{0.48\textwidth} c c c}
+\noindent\begin{tabularx}{\textwidth}{p{0.20\textwidth} Y c c c}
 \toprule
 \textbf{知识单元} & \textbf{核心知识点与具体主题} & \textbf{认知等级} & \textbf{分类} & \textbf{学时} \\
 \midrule
-\endfirsthead
-\toprule
-\textbf{知识单元} & \textbf{核心知识点与具体主题} & \textbf{认知等级} & \textbf{分类} & \textbf{学时} \\
-\midrule
-\endhead
-\bottomrule
-\endfoot
 \multirow{4}{*}{\makecell[l]{操作系统/操作系统的\\角色与目标}} 
 & 操作系统作为硬件与应用软件间的中介抽象层 [跨界 PL] & 解释 & 计算机核心 & \multirow{4}{*}{3} \\
 & 通用操作系统功能（接口、应用执行生命周期、数据持久化） & 解释 & 计算机核心 & \\
@@ -799,4 +792,7 @@
 \multirow{2}{*}{\makecell[l]{操作系统/社会、伦理与\\专业素养议题}} 
 & 开源操作系统生态演化、内核协同漏洞披露与打补丁机制；商业模式演进 & 解释 & 领域核心 & \multirow{2}{*}{4} \\
 & 停服弃用与老旧系统过生命周期（EOL）引发的社会风险 [跨界 SE] & 解释 & 领域核心 & \\
-\end{longtable}
+\bottomrule
+\end{tabularx}
+\clearpage
+\twocolumn

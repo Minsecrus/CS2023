@@ -167,17 +167,10 @@
 \onecolumn
 \section{附录：核心主题与技能要求等级对照表}
 
-\begin{longtable}{p{0.18\textwidth} p{0.48\textwidth} c c c}
+\noindent\begin{tabularx}{\textwidth}{p{0.18\textwidth} Y c c c}
 \toprule
 \textbf{知识单元} & \textbf{核心知识点与具体主题} & \textbf{认知等级} & \textbf{分类} & \textbf{学时} \\
 \midrule
-\endfirsthead
-\toprule
-\textbf{知识单元} & \textbf{核心知识点与具体主题} & \textbf{认知等级} & \textbf{分类} & \textbf{学时} \\
-\midrule
-\endhead
-\bottomrule
-\endfoot
 \multirow{2}{*}{\makecell[l]{网络通信/网络导论}} 
 & 分组交换与电路交换本质辨析、五层模型与沙漏原则 & 解释 & 计算机核心 & 2 \\
 & 自治系统 AS、ISP 架构与排队论核心概念 & 解释 & 计算机核心 & 1 \\
@@ -202,4 +195,7 @@
 \makecell[l]{网络通信/网络安全} & DDoS 攻击防御、TLS 1.3 握手认证、零信任架构配置 & 评估 & 领域核心 & 3 \\
 \midrule
 \makecell[l]{网络通信/前沿新兴} & 软件定义网络 SDN/P4 编程、网络切片与量子通信网络 & 解释 & 领域核心 & 4 \\
-\end{longtable}
+\bottomrule
+\end{tabularx}
+\clearpage
+\twocolumn

@@ -452,17 +452,10 @@
 \onecolumn
 \section{附录：核心主题与技能要求等级对照表}
 
-\begin{longtable}{p{0.18\textwidth} p{0.48\textwidth} c c c}
+\noindent\begin{tabularx}{\textwidth}{p{0.18\textwidth} Y c c c}
 \toprule
 \textbf{知识单元} & \textbf{核心知识点与具体主题} & \textbf{认知等级} & \textbf{分类} & \textbf{学时} \\
 \midrule
-\endfirsthead
-\toprule
-\textbf{知识单元} & \textbf{核心知识点与具体主题} & \textbf{认知等级} & \textbf{分类} & \textbf{学时} \\
-\midrule
-\endhead
-\bottomrule
-\endfoot
 \multirow{3}{*}{\makecell[l]{并行分布式/程序与执行}} 
 & 并行动作定义、Happens-before 先行发生关系、数据独立性、一致性、物理执行位置与通信故障 & 解释 & 计算机核心 & 1 \\
 & 并行动作的启动机制：编排放置、过程式派生、事件驱动反应式、依赖驱动启动 & 解释 & 计算机核心 & 1 \\
@@ -487,4 +480,7 @@
 & 并行与分布式算法表达与实现：在主流语言与并发框架中落地线程派生、共享内存同步、套接字与 RPC & 开发 & 计算机核心 & 1 \\
 & 核心计算范式与系统架构总览：多核共享内存、反应式、数据并行、集群、云计算、开放分布式系统的全景权衡 & 解释 & 计算机核心 & 1 \\
 & 八大核心算法应用领域：并行线性代数、大规模数据处理、图算法与组合搜索、偏微分仿真、并行 SAT 求解、图形学渲染、工作窃取资源调度、高并发金融微服务 & 开发 & 领域核心 & 9 \\
-\end{longtable}
+\bottomrule
+\end{tabularx}
+\clearpage
+\twocolumn

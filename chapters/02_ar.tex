@@ -567,17 +567,10 @@
 \onecolumn
 \section{附录：核心主题与技能要求等级对照表}
 
-\begin{longtable}{p{0.18\textwidth} p{0.48\textwidth} c c c}
+\noindent\begin{tabularx}{\textwidth}{p{0.18\textwidth} Y c c c}
 \toprule
 \textbf{知识单元} & \textbf{核心知识点与具体主题} & \textbf{认知等级} & \textbf{分类} & \textbf{学时} \\
 \midrule
-\endfirsthead
-\toprule
-\textbf{知识单元} & \textbf{核心知识点与具体主题} & \textbf{认知等级} & \textbf{分类} & \textbf{学时} \\
-\midrule
-\endhead
-\bottomrule
-\endfoot
 \multirow{2}{*}{\makecell[l]{体系结构/数字逻辑与\\数字系统}} 
 & 体系结构演进历史；组合逻辑与时序逻辑基本构建块；硬件与软件多层抽象体系结构 & 解释 & 领域核心 & \multirow{2}{*}{3} \\
 \cmidrule{2-4}
@@ -615,4 +608,6 @@
 \makecell[l]{体系结构/量子体系结构} 
 & 量子物理原理（波粒二象性、测不准原理、Qubit、叠加态、纠缠、公理体系、单/双量子比特门、不可克隆定理）；量子算法（Bernstein-Vazirani、Simon、Shor、Grover）；硬件实现（九大物理路线、经典控制、NISQ）；新兴应用（抗量子密码 PQC、量子互联网、量子退火） & 解释 & 领域核心 & 3 \\
 \bottomrule
-\end{longtable}
+\end{tabularx}
+\clearpage
+\twocolumn

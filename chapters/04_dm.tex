@@ -686,17 +686,10 @@ DBMS 内核是系统软件设计的集大成者。本单元剖析内存缓冲池
 \onecolumn
 \section{附录：核心主题与技能要求等级对照表}
 
-\begin{longtable}{p{0.18\textwidth} p{0.45\textwidth} c c c}
+\noindent\begin{tabularx}{\textwidth}{p{0.18\textwidth} Y c c c}
 \toprule
 \textbf{知识单元} & \textbf{核心知识点与具体主题} & \textbf{认知等级} & \textbf{分类} & \textbf{学时} \\
 \midrule
-\endfirsthead
-\toprule
-\textbf{知识单元} & \textbf{核心知识点与具体主题} & \textbf{认知等级} & \textbf{分类} & \textbf{学时} \\
-\midrule
-\endhead
-\bottomrule
-\endfoot
 \multirow{2}{*}{\makecell[l]{数据管理/数据的作用\\与治理}} 
 & 数据生命周期（创建、处理、审查、归档、销毁）与全链路合规 & 评估 & 计算机核心 & \multirow{2}{*}{2} \\
 & 数据集合的社会与法律伦理维度（规模效应、隐私设计、所有权） & 评估 & 计算机核心 & \\
@@ -738,4 +731,7 @@ DBMS 内核是系统软件设计的集大成者。本单元剖析内存缓冲池
 数据管理/数据安全与隐私 & 规划中：静态加密、细粒度行级访问控制、差分隐私、脱敏防泄露 & 制定中 & 规划中 & 待定 \\
 \midrule
 数据管理/数据分析 & 规划中：OLAP 架构、列式存储、数据湖仓一体与现代数据管道 & 制定中 & 规划中 & 待定 \\
-\end{longtable}
+\bottomrule
+\end{tabularx}
+\clearpage
+\twocolumn

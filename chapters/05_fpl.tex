@@ -1022,17 +1022,10 @@
 
 下表详细汇总了编程语言理论基础（FPL）知识领域的核心知识单元、对应主题、布鲁姆认知技能达标等级、核心学时分类以及推荐学时分配：
 
-\begin{longtable}{p{0.18\textwidth} p{0.48\textwidth} c c c}
+\noindent\begin{tabularx}{\textwidth}{p{0.18\textwidth} Y c c c}
 \toprule
 \textbf{知识单元} & \textbf{核心知识点与具体主题} & \textbf{认知等级} & \textbf{核心分类} & \textbf{学时} \\
 \midrule
-\endfirsthead
-\toprule
-\textbf{知识单元} & \textbf{核心知识点与具体主题} & \textbf{认知等级} & \textbf{核心分类} & \textbf{学时} \\
-\midrule
-\endhead
-\bottomrule
-\endfoot
 \multirow{4}{*}{\makecell[l]{编程语言/面向对象编程}} 
 & 面向对象设计：状态与行为解耦、面向领域建模的类层次结构设计；类定义（字段、方法、构造函数）；子类化、单/多继承与方法重写；动态分派（方法调用晚期绑定）；异常处理机制 & 开发 & 计算机核心 & 3 \\
 \cline{2-5}
@@ -1071,4 +1064,7 @@
 \midrule
 \makecell[l]{编程语言/程序表示} 
 & 形式语言表征工具（BNF、EBNF、正则表达式）；以程序为输入的元程序体系（编译器、解释器、分析器、文档生成器）；语言构成要素（字母表、记号、语句、语法与语义）；抽象语法树（AST）与具体语法解耦；核心通用编程抽象（变量、控制语句、模块）；可变性权衡（原地覆盖 vs 纯值复制、记忆化）；左值（L-value）与右值（R-value）；变量作用域与生存期（静态词法作用域 vs 动态作用域、可见性遮蔽、副作用）；环境与存储二元数学模型；参数传递全景对比（传值、传引用、传值-结果、传名调用、按需调用）；多级中间表示（AST、SSA 形式）；汇编与机器指令表示；Lambda 演算基础（绑定、$\alpha$-变换、$\beta$-归约） & 解释 & 领域核心 & 3 \\
-\end{longtable}
+\bottomrule
+\end{tabularx}
+\clearpage
+\twocolumn

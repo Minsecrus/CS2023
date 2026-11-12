@@ -743,17 +743,10 @@
 \onecolumn
 \section{附录：核心主题与技能要求等级对照表}
 
-\begin{longtable}{p{0.20\textwidth} p{0.46\textwidth} c c c}
+\noindent\begin{tabularx}{\textwidth}{p{0.20\textwidth} Y c c c}
 \toprule
 \textbf{知识单元} & \textbf{核心知识点与具体主题} & \textbf{认知等级} & \textbf{分类} & \textbf{学时} \\
 \midrule
-\endfirsthead
-\toprule
-\textbf{知识单元} & \textbf{核心知识点与具体主题} & \textbf{认知等级} & \textbf{分类} & \textbf{学时} \\
-\midrule
-\endhead
-\bottomrule
-\endfoot
 \multirow{2}{*}{\makecell[l]{软件工程/团队协作\\与沟通}} 
 & 有效沟通、团队冲突根因与消解策略、结对编程、同侪代码评审、角色分工、敏捷流程、团队多元化 & 评估 & 计算机核心 & 2 \\
 \cmidrule{2-5}
@@ -787,4 +780,7 @@
 \midrule
 \makecell[l]{软件工程/软件可靠性\\工程} 
 & 可靠性数学概念、领域可靠性需求定级、缺陷注入与清除全周期、系统级冗余容错行为、现代 SRE“错误预算”与“零缺陷”对比思辨 & 解释 & 领域核心 & 2 \\
-\end{longtable}
+\bottomrule
+\end{tabularx}
+\clearpage
+\twocolumn

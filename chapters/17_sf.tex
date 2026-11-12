@@ -486,21 +486,13 @@
     \end{itemize}
 \end{itemize}
 
-\clearpage
-\onecolumn
+\begin{strip}
 \section{附录：核心主题与技能要求等级对照表}
 
-\begin{longtable}{p{0.18\textwidth} p{0.46\textwidth} c c c}
+\noindent\begin{tabularx}{\textwidth}{p{0.18\textwidth} Y c c c}
 \toprule
 \textbf{知识单元} & \textbf{核心知识点与具体主题} & \textbf{认知等级} & \textbf{分类} & \textbf{学时} \\
 \midrule
-\endfirsthead
-\toprule
-\textbf{知识单元} & \textbf{核心知识点与具体主题} & \textbf{认知等级} & \textbf{分类} & \textbf{学时} \\
-\midrule
-\endhead
-\bottomrule
-\endfoot
 \multirow{3}{*}{\makecell[l]{系统基础/计算机系统\\概述}} 
 & 计算机基本组件（门、触发器、寄存器、总线；数据通路+控制+存储器）与体系结构历史演进 & 解释 & 计算机核心 & \multirow{3}{*}{3} \\
 & 作为计算范式的硬件逻辑、布尔表达式、逻辑化简与与或式（SOP）；编程抽象、接口与库调用 & 解释 & 计算机核心 & \\
@@ -536,4 +528,6 @@
 \multirow{2}{*}{\makecell[l]{系统基础/系统设计}} 
 & 系统设计核心通用衡量准则（活跃性、安全性、鲁棒性、高可扩展性与系统安全性） & 开发 & 计算机核心 & 2 \\
 & 业界工业级代表性系统架构全景深度剖析（Apache HTTP Server、Apache Spark、Linux 内核） & 开发 & 领域核心 & 1 \\
-\end{longtable}
+\bottomrule
+\end{tabularx}
+\end{strip}
