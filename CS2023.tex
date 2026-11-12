@@ -33,7 +33,14 @@
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 
 % 保证 longtable 在单栏全宽显示，结束后恢复双栏
-\BeforeBeginEnvironment{longtable}{\clearpage\onecolumn}
+\makeatletter
+\BeforeBeginEnvironment{longtable}{%
+    \if@twocolumn
+        \clearpage
+        \onecolumn
+    \fi
+}
+\makeatother
 \AfterEndEnvironment{longtable}{\clearpage\twocolumn}
 
 % 让目录保持双栏排版
