@@ -30,9 +30,9 @@
 
 在 CS2023“向日葵模型”架构下，图形学与交互技术领域各单元的核心推荐学时分配如下表所示：
 
-\begin{table*}[htbp]
-\centering\small
-\setlength{\tabcolsep}{2.5pt}\footnotesize\begin{tabularx}{0.88\textwidth}{Y c c}
+\begin{table}[H]
+\centering
+\setlength{\tabcolsep}{3.5pt}\fontsize{8pt}{9.6pt}\selectfont\begin{tabularx}{\columnwidth}{Y c c}
 \toprule
 \textbf{知识单元} & \textbf{计算机核心} & \textbf{领域核心} \\
 \midrule
@@ -42,7 +42,7 @@
 高级着色与进阶渲染 & -- & 6 \\
 计算机动画 & -- & 6 \\
 数据与信息可视化 & -- & 6 \\
-沉浸式技术 (Immersion: MR, AR, VR) & -- & 6 \\
+沉浸式技术 & -- & 6 \\
 交互技术 & -- & 6 \\
 数字图像处理 & -- & 6 \\
 实体与物理计算 & -- & 6 \\
@@ -51,7 +51,7 @@
 \textbf{合计} & \textbf{4 学时} & \textbf{72 学时} \\
 \bottomrule
 \end{tabularx}
-\end{table*}
+\end{table}
 
 \section{知识单元与详细大纲}
 
@@ -62,7 +62,7 @@
 
 \subsubsection{计算机核心主题}
 \begin{itemize}
-    \item \textbf{娱乐、工商业与科学应用图景}：视觉特效（VFX）、机器学习与计算机视觉交叉、现代图形用户界面（GUI）、视频编辑管线、游戏引擎架构、计算机辅助设计与制造（CAD/CAM）、空间与时变数据可视化、虚拟/增强/混合现实（VR/体系结构/MR）。
+    \item \textbf{娱乐、工商业与科学应用图景}：视觉特效（VFX）、机器学习与计算机视觉交叉、现代图形用户界面（GUI）、视频编辑管线、游戏引擎架构、计算机辅助设计与制造（CAD/CAM）、空间与时变数据可视化、虚拟/增强/混合现实（VR/AR/MR）。
     \item \textbf{人类视觉生理系统与感知模型}：
     \begin{itemize}
         \item 视网膜感光锥状细胞与三刺激响应（RGB 三原色理论）。
@@ -189,7 +189,7 @@
     \item \textbf{[评估]} 在处理复杂三维几何遮挡与可见性判断问题时，系统横向评测光线追踪与 $Z$-buffer 算法的优劣。
     \item \textbf{[开发]} 编程实现对二维几何图元的平移、旋转、缩放复合变换以及齐次视锥剪裁（如 Cohen-Sutherland 或 Liang-Barsky 算法）。
     \item \textbf{[开发]} 基于现代着色器接口（如现代 OpenGL / WebGL），利用顶点缓冲（VBO）、索引缓冲（EBO）与编写 GLSL 顶点/片元着色器，实现一个完整的实时着色器渲染器。
-    \item \textbf{[对比]} 深入对比 Phong 经验经验光照模型、Gouraud 顶点光照插值与基于物理的 Microfacet 材质渲染在真实感上的阶跃演进。
+    \item \textbf{[对比]} 深入对比 Phong 经验光照模型、Gouraud 顶点光照插值与基于物理的 Microfacet 材质渲染在真实感上的阶跃演进。
     \item \textbf{[计算]} 根据屏幕显示分辨率、每像素颜色位深与通道格式，精确计算双缓冲图形输出所需的物理显存带宽与容量。
     \item \textbf{[计算]} 根据显示器垂直刷新率（如 60Hz、144Hz）与几何三角形吞吐量，量化推导光栅化渲染管线在单帧时间预算（如 16.6ms、6.9ms）内的算力瓶颈。
 \end{enumerate}
@@ -220,7 +220,7 @@
     \end{itemize}
     \item \textbf{过程式与生成式几何建模}：
     \begin{itemize}
-        \item 分形几何（Fractals，自相似性 Mandelbrot 集合、分形地形地形生成）。
+        \item 分形几何（Fractals，自相似性 Mandelbrot 集合、分形地形生成）。
         \item 文法驱动的生成式系统：L-系统（Lindenmayer Systems，植物分支形态生成，与编程语言形式文法交叉）。
         \item 基于深度学习的生成式几何模型（如 NeRF 神经辐射场与 3D 高斯泼溅 Gaussian Splatting 初步）。
     \end{itemize}
@@ -277,7 +277,7 @@
     \item \textbf{层次化深度缓冲加速}：GPU 硬件 Early-Z 早期深度剔除流水线。
     \item \textbf{光场理论与基于图像的渲染技术}：全光函数、视差贴图、环境光照映射（IBL）与神经辐射场呈现机理。
     \item \textbf{非真实感艺术风格渲染}：卡通着色、轮廓边缘检测（Sobel 与法线/深度不连续性提取）、手绘风格与素描笔触合成。
-    \item \textbf{现代 GPU 高性能计算与微架构解剖}：流式多处理器（SM）组织、Warp 线程束调度、显存访存合并、硬件光线追踪加速内核（如 RT Core BVH 遍历与求交求交引擎）。
+    \item \textbf{现代 GPU 高性能计算与微架构解剖}：流式多处理器（SM）组织、Warp 线程束调度、显存访存合并、硬件光线追踪加速内核（如 RT Core BVH 遍历与求交引擎）。
     \item \textbf{人类视觉感知在高阶着色中的映射}：明暗适应性动态调节、人眼对光强高频噪声的掩蔽效应、频闪融合与高帧率刷新对真实感的塑造。
 \end{itemize}
 
@@ -589,7 +589,7 @@
 \begin{enumerate}
     \item \textbf{[开发]} 构建一个基础硬件控制电路（包含微控制器、限流电阻与物理按键开关），编写固件实现通过按键消抖触发点亮或关闭高亮发光二极管（LED）。
     \item \textbf{[开发]} 搭建并联调一个闭环实体机电控制系统，使舵机能够根据超声波或红外距离传感器的实时测距数值，做出精准角度旋转跟踪。
-    \item \textbf{[开发]} 利用光敏传感器采集环境环境照度，通过编程动态驱动外部物理执行器（如平滑调节 LED 阵列的发光亮度或驱动显示屏幕中图形的虚拟色彩）。
+    \item \textbf{[开发]} 利用光敏传感器采集环境照度，通过编程动态驱动外部物理执行器（如平滑调节 LED 阵列的发光亮度或驱动显示屏幕中图形的虚拟色彩）。
     \item \textbf{[开发]} 在专业计算机辅助设计（CAD）工业软件中独立构建一个复杂的三维实体零件，达成以下指标：
     \begin{itemize}
         \item 在 CAD 系统中演示并论证空间仿射变换（平移、旋转、镜像）的底层数学实现。
@@ -880,8 +880,8 @@
 & 碰撞检测与动态物理响应算法（SDF 求交、分离轴定理） & 解释/实现 & 领域核心 & 2 \\
 & 基于欧拉网格的流体动力学、半拉格朗日平流与泊松压力投影 & 解释/实现 & 领域核心 & 2 \\
 \midrule
-\multirow{3}{*}{\makecell[l]{图形交互/沉浸式技术\\(Immersion:\\MR, AR, VR)}} 
-& 扩展现实谱系定义辨析（VR/体系结构/MR）、医学与国防仿真应用 & 解释 & 领域核心 & 1 \\
+\multirow{3}{*}{\makecell[l]{图形交互/沉浸式技术}} 
+& 扩展现实谱系定义辨析（VR/AR/MR）、医学与国防仿真应用 & 解释 & 领域核心 & 1 \\
 & 双目立体显示光学、6-DoF 空间位姿追踪、动光延迟抑制 & 解释/实现 & 领域核心 & 3 \\
 & 沉浸人因安全（晕动症规避）、无障碍通用设计与空间隐私伦理 & 解释/评估 & 领域核心 & 2 \\
 \midrule
