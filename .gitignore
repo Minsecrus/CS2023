@@ -25,3 +25,6 @@ Thumbs.db
 
 # Keep the compiled release PDF
 !CS2023.pdf
+
+# Original English reference PDF
+CS2023_original.pdf
