@@ -9,7 +9,7 @@
 \begin{enumerate}
     \item \textbf{核心层（计算机核心）范围系统性强化}：突破以往仅聚焦网络导论与上层应用的局限，将可靠传输协议机制、路由寻址与单跳信道通信的核心原理纳为必修基础。
     \item \textbf{网络安全成为核心选修专章}：鉴于网络攻防与威胁态势的白热化，新增“网络安全”专有单元，覆盖零信任架构（ZTNA）、BGPsec 安全路由与加密信道。
-    \item \textbf{以“前沿新兴议题”取代陈旧模块}：移除过时的社交网络浅层单元，增设“前沿新兴主题（Emerging Topics）”单元，全面涵盖软件定义网络（SDN）、数据中心网络虚拟化、网络中间件以及量子通信网络。
+    \item \textbf{以“前沿新兴议题”取代陈旧模块}：移除过时的社交网络浅层单元，增设“前沿新兴主题”单元，全面涵盖软件定义网络（SDN）、数据中心网络虚拟化、网络中间件以及量子通信网络。
 \end{enumerate}
 \end{preamblebox}
 
@@ -45,7 +45,7 @@
     \item \textbf{互联网组织分层架构}：最终用户、互联网服务提供商（ISP，Tier~1/2/3 架构）、对等互联、自治系统（AS）、内容提供商与 CDN 节点分布。
     \item \textbf{交换技术本质辨析}：电路交换与分组交换/包交换在统计复用、资源预留与传输延迟上的核心权衡。
     \item \textbf{五层与七层协议模型}：物理层、数据链路层、网络层、传输层与应用层的职责边界；协议数据单元（PDU）封装与解封装流程。
-    \item \textbf{经典沙漏模型}：以 IP 协议为狭腰的核心设计哲学（End-to-End Principle 端到端原则）。
+    \item \textbf{经典沙漏模型}：以 IP 协议为狭腰的核心设计哲学（端到端原则）。
     \item \textbf{网络基础设施核心网元}：路由器、交换机、集线器、无线接入点（AP）与终端主机。
     \item \textbf{排队论与队列延迟直觉}：Little 定律直觉、排队延迟、丢包率与网络拥塞状态关联。
 \end{itemize}
@@ -67,12 +67,12 @@
     \item \textbf{不可靠底座与尽力而为模型}：UDP 报文格式及其在实时音视频、DNS 中的适用性。
     \item \textbf{可靠数据传输协议原理}：差错检验（校验和 Checksum）、自动重传请求（ARQ）、停等协议、流水线协议（滑动窗口、回退 N 步 GBN、选择重传 SR）。
     \item \textbf{TCP 协议核心机制全解}：三次握手与四次挥手状态机演进、SYN Flood 防范、时间戳与 TIME\_WAIT 状态管理。
-    \item \textbf{流量控制与拥塞控制 (Flow \& Congestion Control)}：
+    \item \textbf{流量控制与拥塞控制}：
     \begin{itemize}
         \item 接收窗口 rwnd 与滑动窗口流量控制。
         \item 拥塞窗口 cwnd 与经典拥塞控制算法：慢启动、拥塞避免、快重传与快恢复（TCP Reno、Cubic）。
         \item 基于时延与带宽的拥塞控制（BBR 算法）。
-        \item QUIC 协议在现代 Web 传输中的革新（解决队头阻塞 Head-of-Line Blocking）。
+        \item QUIC 协议在现代 Web 传输中的革新（解决队头阻塞）。
     \end{itemize}
 \end{itemize}
 
@@ -93,7 +93,7 @@
 \begin{itemize}
     \item \textbf{物理层基础}：信道带宽、奈奎斯特准则、香农定理、模拟调制与数字基带编码（曼彻斯特编码等）。
     \item \textbf{成帧与差错控制}：帧同步定界、位填充法、循环冗余校验（CRC-32）数学推导。
-    \item \textbf{介质访问控制 (MAC)}：信道划分（FDMA、TDMA、CDMA）、随机访问（CSMA/CD、CSMA/CA 碰撞避免机制与指数退避算法）。
+    \item \textbf{介质访问控制} (MAC)：信道划分（FDMA、TDMA、CDMA）、随机访问（CSMA/CD、CSMA/CA 碰撞避免机制与指数退避算法）。
     \item \textbf{现代以太网与二层交换}：以太网帧结构、MAC 地址学习与转发表自学习、生成树协议（STP）消除二层环路、虚拟局域网（VLAN 802.1Q）。
     \item \textbf{现代数据中心网络拓扑}：Fat-Tree（胖树拓扑）、Spine-Leaf（脊叶架构）与无阻塞 ECMP 等价多路径路由。
 \end{itemize}
@@ -136,8 +136,8 @@
 \section{课程设计与教学实施建议}
 
 \begin{enumerate}
-    \item \textbf{导论型计算机网络课 (Introductory Course, 45 学时)}：覆盖网络导论（9h）、网络应用与 Socket 编程（12h）、传输层与 TCP（6h）、IP 路由（4h）、以太网链路（3h）、无线与安全入门。侧重网络应用开发与基本抓包实战（Wireshark）。
-    \item \textbf{高级进阶网络系统课 (Advanced Course, 45 学时)}：深入 BGP 与大规模路由（6h）、TCP 拥塞算法与 QUIC（8h）、数据中心 Spine-Leaf 与交换（5h）、移动蜂窝切片（5h）、零信任与网络攻防（5h）、SDN/P4 可编程数据平面（6h）。侧重协议设计与网络模拟实验（NS-3/Mininet）。
+    \item \textbf{导论型计算机网络课}（45 学时）：覆盖网络导论（9h）、网络应用与 Socket 编程（12h）、传输层与 TCP（6h）、IP 路由（4h）、以太网链路（3h）、无线与安全入门。侧重网络应用开发与基本抓包实战（Wireshark）。
+    \item \textbf{高级进阶网络系统课}（45 学时）：深入 BGP 与大规模路由（6h）、TCP 拥塞算法与 QUIC（8h）、数据中心 Spine-Leaf 与交换（5h）、移动蜂窝切片（5h）、零信任与网络攻防（5h）、SDN/P4 可编程数据平面（6h）。侧重协议设计与网络模拟实验（NS-3/Mininet）。
 \end{enumerate}
 
 \section{真实能力任务规范}

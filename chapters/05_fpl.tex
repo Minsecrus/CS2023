@@ -18,7 +18,7 @@
     \item \textbf{学科重命名与聚焦基础理论}：将原“编程语言”正式更名为“编程语言理论基础”，旨在深刻彰显本知识领域聚焦于支撑语言演进的本质规律与底层基础理论，而非局限于特定工程语言的语法细节。
     \item \textbf{学时层级体系的重构与精细化调整}：将原 CS2013 的一级核心（Core Tier-1）与二级核心（Core Tier-2）全面重构升级为计算机核心与领域核心。所有计算机科学专业毕业生均必须掌握 计算机核心 规定的核心学时；而致力于在系统软件或理论计算机方向深化的学生，需进一步修满 领域核心 学时；其余主题则归为拓展选修。根据过去十年软件产业界与学术界的技术重心迁移，核心学时进行了针对性调整：
     \begin{itemize}
-        \item \textbf{面向对象编程 (OOP)}：+1 计算机核心学时，-2 领域核心学时
+        \item \textbf{面向对象编程} (OOP)：+1 计算机核心学时，-2 领域核心学时
         \item \textbf{函数式编程}：+1 计算机核心学时
         \item \textbf{逻辑式编程}：+3 核心学时（强化面向数据逻辑与 AI 的谓词基础）
         \item \textbf{事件驱动与响应式编程}：+2 计算机核心学时
@@ -112,7 +112,7 @@
         \item 抽象基类、特质与混入组合。
     \end{itemize}
     \item \textbf{动态属性 vs 静态属性}：静态成员/方法与动态实例属性的时空开销权衡。
-    \item \textbf{对象复用原则}：组合优于继承（Composition vs. Inheritance）的深度设计准则。
+    \item \textbf{对象复用原则}：组合优于继承的深度设计准则。
 \end{itemize}
 
 \subsubsection{领域核心主题}
@@ -149,7 +149,7 @@
     \begin{itemize}
         \item 变量绑定与静态词法作用域规则。
         \item 形参实参求值传递机制。
-        \item 嵌套 Lambda 表达式抽象与归约次序（Reduction Order，如正规序 vs 应用序）。
+        \item 嵌套 Lambda 表达式抽象与归约次序（如正规序 vs 应用序）。
     \end{itemize}
     \item \textbf{无副作用编程}：
     \begin{itemize}
@@ -216,7 +216,7 @@
     \item \textbf{合一机制}：一阶合一原理与最一般合一子（MGU）求解算法；深刻辨析“合一”与“断言声明”及“表达式代数求值”的本质差异。
     \item \textbf{关系与函数的协同}：谓词关系逻辑与函数表达式的相互映射与混合编程。
     \item \textbf{非确定性控制}：非确定性推导执行模型、深搜回溯机制与剪枝运算符（Cut `\texttt{!}'）的控制语义。
-    \item \textbf{世界假设理论}：封闭世界假设（Closed-World Assumption, 失败即否定）与开放世界假设的哲学与逻辑差异。
+    \item \textbf{世界假设理论}：封闭世界假设（失败即否定）与开放世界假设的哲学与逻辑差异。
 \end{itemize}
 
 \subsubsection{拓展选修主题}
@@ -302,7 +302,7 @@
 
 \subsubsection{计算机核心主题}
 \begin{itemize}
-    \item \textbf{并发正确性基础}：安全性（Safety / 坏事绝不发生）与活性（Liveness / 好事终将发生）形式化属性。
+    \item \textbf{并发正确性基础}：安全性（坏事绝不发生）与活性（好事终将发生）形式化属性。
     \item \textbf{并发隐患}：数据竞争、死锁、活锁与饥饿。
     \item \textbf{数据与控制依赖}：因果前置条件依赖与终止性证明。
     \item \textbf{主流并发编程模型}：
@@ -322,7 +322,7 @@
     \item \textbf{数据并行语言级支持}：\texttt{forall} 并发循环、自动循环展开、Map-Reduce 原语的硬件向量化展开。
     \item \textbf{硬件内存一致性模型}：顺序一致性、释放一致性、弱内存模型对编程语言语义规范与编译器优化重排的深刻影响。
     \item \textbf{分布式服务集成}：RESTful 架构契约与微服务远程方法调用。
-    \item \textbf{并发基础设施开销}：消息序列化与深拷贝开销、上下文切换代价、多核缓存一致性伪共享（False Sharing）。
+    \item \textbf{并发基础设施开销}：消息序列化与深拷贝开销、上下文切换代价、多核缓存一致性伪共享。
     \item \textbf{并发粒度权衡}：有效挖掘计算性能的最佳任务粒度，避免通信开销压倒并发增益。
     \item \textbf{范式交叉融合}：纯函数式不可变性与无锁并发编程的天然协同。
 \end{itemize}
@@ -348,8 +348,8 @@
 \begin{itemize}
     \item \textbf{类型的数学本质}：类型作为合法值的集合以及施加于该集合上的一组良定义操作算子集合。
     \begin{itemize}
-        \item 原生基元类型（Primitive Types，如定宽整数、浮点数、布尔值）。
-        \item 复合代数类型（Compound Types，如积类型记录 Records、和类型联合 Unions、数组、列表、函数空间、可变引用）。
+        \item 原生基元类型（如定宽整数、浮点数、布尔值）。
+        \item 复合代数类型（如积类型记录 Records、和类型联合 Unions、数组、列表、函数空间、可变引用）。
     \end{itemize}
     \item \textbf{类型绑定体系}：静态类型推导/显式标注与变量、函数形参、返回值及对象字段的关联。
     \item \textbf{类型安全性}：类型安全作为程序逻辑正确性不可动摇的核心防线；未定义类型错误及其引发的内存崩溃灾难。
@@ -361,7 +361,7 @@
         \item 单态类型与多态类型的表达力对比。
         \item 泛型容器类库与标准模板架构。
         \item 描述性多态 vs 规定性多态。
-        \item 泛型多态的底层编译器实现模型：类型擦除（Type Erasure，如 Java）vs 模板单态化膨胀（Monomorphization，如 C++/Rust）。
+        \item 泛型多态的底层编译器实现模型：类型擦除（如 Java）vs 模板单态化膨胀（如 C++/Rust）。
     \end{itemize}
 \end{itemize}
 
@@ -436,7 +436,7 @@
     \item \textbf{抽象低级执行模型}：用于推演语言编译与执行的精简抽象指令集、执行栈与堆模型。
     \item \textbf{进程运行时物理内存布局}：
     \begin{itemize}
-        \item 活动记录/栈帧（Activation Record / Stack Frame，包含返回地址、动态调用链、静态词法链指针、局部变量分配）；
+        \item 活动记录/栈帧（包含返回地址、动态调用链、静态词法链指针、局部变量分配）；
         \item 全局静态数据段、代码只读段、动态调用栈与动态增长堆区。
     \end{itemize}
     \item \textbf{控制与函数翻译机制}：
@@ -493,7 +493,7 @@
     \item \textbf{作用域消解法则}：静态词法作用域vs 动态作用域；变量可见性遮蔽；隐藏副作用。
     \item \textbf{环境与存储}：运行时环境映射（Environment: Identifier $\to$ Location）与内存存储映射（Store: Location $\to$ Value）的二元数学解耦模型。
     \item \textbf{模块间信息交互机制}：非局部变量访问、全局共享变量、形参实参传递、显式模块导出/导入接口。
-    \item \textbf{参数传递机制全景对比}：传值调用、传引用调用、传值-结果调用、传名调用（Call by name / 替换求值）、按需调用（Call by need / 惰性记忆化求值）。
+    \item \textbf{参数传递机制全景对比}：传值调用、传引用调用、传值-结果调用、传名调用（替换求值）、按需调用（惰性记忆化求值）。
     \item \textbf{代码的多级中间表示}：用于代码分析、优化与迁移的内部数据结构（抽象语法树、三地址码、控制流图、静态单赋值 SSA 形式）。
     \item \textbf{底层指令表征}：虚拟机操作码、汇编指令与二进制 ELF/PE 机器码布局。
     \item \textbf{Lambda 演算理论基础}：变量绑定、自由变量与约束变量、$\alpha$-变换（重命名）、$\beta$-归约与 $\eta$-变换。
@@ -548,7 +548,7 @@
 
 \subsubsection{拓展选修主题}
 \begin{itemize}
-    \item \textbf{高级程序树形表示}：抽象语法树（AST）与具体解析树（CST）的解耦；AST 的定义、遍历（访问者模式 Visitor Pattern）与结构重写。
+    \item \textbf{高级程序树形表示}：抽象语法树（AST）与具体解析树（CST）的解耦；AST 的定义、遍历（访问者模式）与结构重写。
     \item \textbf{作用域与符号表管理}：多层嵌套作用域符号表体系构建与标识符绑定消解。
     \item \textbf{静态语义检查规约}：类型系统相容性检查；先声明后使用规则；静态断言与扩展静态检查框架。
     \item \textbf{值范畴语义}：左值（L-value）与右值（R-value）语义判定。
@@ -575,7 +575,7 @@
     \item \textbf{可计算性根本边界}：莱斯定理（Rice's Theorem）与停机问题不可判定性对程序静态分析的根本理论制约。
     \item \textbf{流无关分析}：类型推断检查、高可扩展性指针分析与别名分析（如 Andersen、Steensgaard 算法）。
     \item \textbf{流敏感分析}：基于半格理论与最大固定点算法（MFP）的前向/后向单调数据流分析框架（活跃变量分析、可用表达式、到达定值）。
-    \item \textbf{路径敏感分析}：符号执行（Symbolic Execution）、软件模型检验与抽象解释。
+    \item \textbf{路径敏感分析}：符号执行、软件模型检验与抽象解释。
     \item \textbf{工业级分析平台框架}：现代静态分析基础设施（如 LLVM, Soot, WALA, Infer）。
     \item \textbf{静态分析指导代码优化}：常量传播、死代码消除、循环不变式外提与并发数据依赖分析。
     \item \textbf{安全性漏洞挖掘}：空指针解引用、缓冲区溢出、资源泄露的静态模式检测与形式化验证。
@@ -602,7 +602,7 @@
     \item \textbf{目标体系结构模型}：目标指令集架构（ISA，如 x86-64, ARM64, RISC-V）的寄存器组织与指令约束。
     \item \textbf{控制流映射}：将控制流图分支映射为条件跳转与无条件分支指令序列。
     \item \textbf{运行时内存与布局约束}：目标平台内存对齐限制与系统调用规约。
-    \item \textbf{过程调用约定 (ABI)}：应用二进制接口（ABI）、调用者/被调用者保存寄存器划分、栈帧分配与虚方法分派开销。
+    \item \textbf{过程调用约定} (ABI)：应用二进制接口（ABI）、调用者/被调用者保存寄存器划分、栈帧分配与虚方法分派开销。
     \item \textbf{分离编译与链接}：多模块独立编译、符号重定位、静态链接与动态共享库链接。
     \item \textbf{指令选择技术}：树重写模式匹配与动态规划最优指令覆盖（Maximal Munch 算法）。
     \item \textbf{指令调度技术}：利用硬件流水线、规避乱序执行冒险与减少等待气泡。
@@ -626,7 +626,7 @@
 
 \subsubsection{拓展选修主题}
 \begin{itemize}
-    \item \textbf{运行时进程模型}：基于调用栈与堆的活动记录（Activation Record / 栈帧）生命周期；借助帧指针与返回地址实现函数调用环境恢复。
+    \item \textbf{运行时进程模型}：基于调用栈与堆的活动记录（栈帧）生命周期；借助帧指针与返回地址实现函数调用环境恢复。
     \item \textbf{面向对象运行时方法查找}：基于哈希表的动态方法检索、虚方法表与接口方法表的索引分派机制。
     \item \textbf{物理对象布局}：对象头、对齐填充与栈帧物理内存布局。
     \item \textbf{堆对象分配策略}：空闲链表、伙伴系统、线程本地分配缓冲区（TLAB）。
@@ -640,7 +640,7 @@
     \end{itemize}
     \item \textbf{即时编译与动态优化}：JIT 编译执行、动态重编译与基于运行时 Profiling 数据推测去优化。
     \item \textbf{操作系统底层交互}：程序冷启动初始化、信号处理与系统调用封装。
-    \item \textbf{跨语言互操作性 (FFI)}：跨语言二进制参数传递协议、C-ABI 兼容性、大小端对齐（Big-Endian vs. Little-Endian）与多维数组存储对齐。
+    \item \textbf{跨语言互操作性} (FFI)：跨语言二进制参数传递协议、C-ABI 兼容性、大小端对齐与多维数组存储对齐。
     \item \textbf{虚拟机核心服务}：类动态加载器、轻量级绿色线程/协程调度器与安全边界检查。
     \item \textbf{安全沙箱隔离机制}：不可信移动代码与插件容器的运行时内存保护与系统调用拦截。
 \end{itemize}
@@ -665,16 +665,16 @@
 \subsubsection{拓展选修主题}
 \begin{itemize}
     \item \textbf{高级封装机制}：模块系统、不透明类型与包私有隔离。
-    \item \textbf{惰性求值与数据流}：惰性计算流与无限序列（Infinite Streams / 生成器模式）。
+    \item \textbf{惰性求值与数据流}：惰性计算流与无限序列（生成器模式）。
     \item \textbf{求值策略对比}：惰性求值 vs 及早求值的内存语义与执行开销深入权衡。
     \item \textbf{形式计算机制对比}：逻辑合一机制 vs 断言机制 vs 表达式求值的本质对照。
     \item \textbf{高阶控制抽象}：结构化异常处理机制、头等延续（First-Class Continuations / \texttt{call/cc}）、单子（Monads，如 State, IO, Maybe 单子）。
     \item \textbf{面向对象高阶结构}：多重继承菱形问题及其变体、混入组合、特质、多重分派/多分派方法。
-    \item \textbf{现代元编程体系}：编译期宏系统（卫生的语法宏 Hygienic Macros）、生成式编程、基于模型的全自动代码生成。
+    \item \textbf{现代元编程体系}：编译期宏系统（卫生语法宏）、生成式编程、基于模型的全自动代码生成。
     \item \textbf{高级模式匹配}：基于模式匹配与解构赋值的高效结构化数据处理。
     \item \textbf{动态代码求值}：运行时动态字符串代码求值（\texttt{eval}）与反射机制的威力与安全漏洞隐患。
     \item \textbf{契约式设计支持}：语言级运行时断言、类不变量、前置条件与后置条件的静态/动态检验。
-    \item \textbf{领域特定语言 (DSL)}：数据库查询语言、数据科学分析语言、同步响应式系统语言、硬件描述语言。
+    \item \textbf{领域特定语言} (DSL)：数据库查询语言、数据科学分析语言、同步响应式系统语言、硬件描述语言。
     \item \textbf{大规模高性能计算语言}：面向超大规模集群与多核异构的高性能并行语言模型。
 \end{itemize}
 
@@ -694,7 +694,7 @@
 \begin{itemize}
     \item \textbf{需求驱动的语言演进}：计算平台变迁与软件工程规模爆炸对编程语言诞生与演进的深层驱动机制。
     \item \textbf{问题领域与范式匹配}：特定行业应用特征与过程式、面向对象、函数式、逻辑式主流编程范式的匹配原则。
-    \item \textbf{优秀语言设计准则}：正交性（Orthogonality / 独立概念互不影响）、合理的默认配置、高可读性与表达力、简洁性。
+    \item \textbf{优秀语言设计准则}：正交性（独立概念互不影响）、合理的默认配置、高可读性与表达力、简洁性。
     \item \textbf{语法构造规范}：现代控制语句与迭代语法糖的精巧设计。
     \item \textbf{超大型系统工程化}：命名空间隔离、依赖包管理器与大型软件工程模块化体系。
     \item \textbf{求值语义确定性}：表达式求值顺序、运算符优先级与结合性规则对语义确定性的影响。
@@ -752,12 +752,12 @@
 \subsubsection{拓展选修主题}
 \begin{itemize}
     \item \textbf{形式化规格说明语言}：工业级形式化建模规范（如 Z 语言、B 方法、TLA+、Alloy、VDM）。
-    \item \textbf{定理证明与辅助工具}：交互式定理证明助手（Interactive Proof Assistants，如 Coq, Isabelle/HOL, Lean, Agda）及底层高阶逻辑体系。
+    \item \textbf{定理证明与辅助工具}：交互式定理证明助手（如 Coq, Isabelle/HOL, Lean, Agda）及底层高阶逻辑体系。
     \item \textbf{自动约束求解器}：SAT/SMT 自动化约束求解器（如 Z3, CVC5）。
     \item \textbf{依赖类型形式化系统}：基于类型理论的程序即证明验证范式。
     \item \textbf{完全验证软件构建}：基于前置/后置契约、精化类型的完全形式化规约与机器证明释放。
     \item \textbf{形式化建模与逐步精化}：软件系统的高层形式化建模与自顶向下阶梯式手工/辅助程序精化。
-    \item \textbf{符号化测试与模糊测试}：符号执行与导向型模糊测试（Fuzzing）在高可靠验证流水线中的集成。
+    \item \textbf{符号化测试与模糊测试}：符号执行与导向型模糊测试在高可靠验证流水线中的集成。
     \item \textbf{模型检验}：基于状态机遍历、Kripke 结构与线性时序逻辑（LTL）/ 计算树逻辑（CTL）的并发协议自动化穷尽验证。
     \item \textbf{形式化方法工程落地策略}：在航空航天飞控、高可靠微内核、区块链智能合约及底层密码库研发中评估并规划形式化方法的最佳应用边界。
 \end{itemize}

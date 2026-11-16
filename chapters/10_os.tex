@@ -104,7 +104,7 @@
         \item 单一内核 / 独核架构：将应用程序与精简内核库编译为单一地址空间镜像，专为云原生虚拟化容器提供极致轻量化与极小攻击面。
     \end{itemize}
     \item \textbf{核心系统级三大抽象}：进程（计算实体抽象）、地址空间与虚拟内存（存储资源抽象）、文件与 I/O 流（外设与通信管道抽象）。
-    \item \textbf{系统调用与应用程序接口（API）}：
+    \item \textbf{系统调用与应用程序接口}（API）：
     \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 系统调用的本质：作为用户空间程序请求内核特权服务的受控入口。
         \item 高层任务通常需要内核底层多组细粒度系统调用的级联配合完成。
@@ -214,9 +214,9 @@
         \item 多级反馈队列 (MLFQ)：动态调整任务优先级与时间片长度，兼顾短交互任务响应与长计算任务吞吐。
         \item 完全公平调度器 (CFS)：基于红黑树与虚拟运行时间度量的高性能公平调度。
     \end{itemize}
-    \item \textbf{对称多处理（SMP）多核调度与缓存协同}：
+    \item \textbf{对称多处理}（SMP）\textbf{多核调度与缓存协同}：
     \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
-        \item 处理器亲和性（Processor Affinity，软亲和性与硬亲和性）以最大限度复用 L1/L2 缓存。
+        \item 处理器亲和性（软亲和性与硬亲和性）以最大限度复用 L1/L2 缓存。
         \item 多核负载均衡：任务推取与任务拉取对多核缓存一致性的扰动。
     \end{itemize}
     \item \textbf{高精度软件定时器虚拟化}：利用有限的物理硬件时钟中断发生器，基于最小堆或时间轮高效虚拟化出数以万计的应用层与内核层高精度定时器。
@@ -261,11 +261,11 @@
         \item 动态链接机制、位置无关代码（PIC）、全局偏移表（GOT）与过程链接表（PLT）的延迟绑定实现细节。
     \end{itemize}
     \item \textbf{分派与上下文切换机制}：分派器的工作逻辑；上下文切换中寄存器现场保存到内核栈、更新 PCB 状态、刷新内存管理单元（MMU）页表基址寄存器（CR3）及其引起的 TLB 缓存失效开销。
-    \item \textbf{进程间通信机制（IPC）全谱系}：
+    \item \textbf{进程间通信机制}（IPC）\textbf{全谱系}：
     \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 共享内存：最高吞吐的 IPC 形式，需配合信号量进行同步。
         \item 消息传递：系统内核提供消息队列，实现解耦异步通信。
-        \item 管道技术：匿名管道（Pipes，仅适用于父子亲缘进程）与命名管道（FIFO，支持无亲缘跨进程）。
+        \item 管道技术：匿名管道（仅适用于父子亲缘进程）与命名管道（FIFO，支持无亲缘跨进程）。
         \item 信号机制：内核向进程传递异步事件通知的标准软中断机制（如 \texttt{SIGINT}、\texttt{SIGSEGV}）。
         \item 环境变量与跨进程参数传递。
     \end{itemize}
@@ -299,7 +299,7 @@
         \item 虚拟页、物理页框、页表项（PTE，包含存在位、读写位、用户/内核位、脏位与访问位）。
         \item 多级页表与倒排页表；转换检测缓冲区（TLB）的高速地址转换缓存及其命中/缺页处理。
         \item 缺页中断处理全流程：从捕获硬件异常、陷入内核、自外存调入页面、更新 PTE 状态至重新执行发生缺页的指令。
-        \item 典型页面置换算法：先进先出（FIFO，Belady 异常）、最优置换算法（OPT）、最近最少使用算法（LRU）、时钟置换算法（Clock / 二次机会算法）。
+        \item 典型页面置换算法：先进先出（FIFO，Belady 异常）、最优置换算法（OPT）、最近最少使用算法（LRU）、时钟置换算法（二次机会算法）。
         \item 页面分配策略与系统抖动/颠簸：颠簸的成因（多道程序度过高导致频繁缺页与磁盘 I/O 堵塞）；基于工作集模型与缺页率控制（PFF）的颠簸根治机制。
     \end{itemize}
     \item \textbf{内核与用户态高效内存分配技术}：
@@ -307,7 +307,7 @@
         \item 伙伴系统：解决外部碎片的大块物理内存分配算法。
         \item Slab / Slub 分配器：针对内核频繁申请释放的小型数据对象缓存池。
         \item 空闲链表、大小分级分配器（Size Classes，如 TCMalloc、Jemalloc 思想）。
-        \item 大页/巨页机制（Hugepages，2MB / 1GB 大页）：大幅降低大型内存应用的 TLB 未命中开销。
+        \item 大页/巨页机制（2MB / 1GB 大页）：大幅降低大型内存应用的 TLB 未命中开销。
     \end{itemize}
     \item \textbf{主存缓存与多核缓存一致性}：高速缓存映射策略（直接映射、组相联）、缓存行填充与写回策略对系统调用性能的影响。
     \item \textbf{内存管理中的系统安全与隔离机制}：
@@ -320,7 +320,7 @@
 
 \subsubsection{选修与前沿拓展主题}
 \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
-    \item \textbf{虚拟内存硬件的高阶服务赋能}：利用页表中断与保护位实现写时复制（Copy-on-Write, COW，如 \texttt{fork()} 的极速派生）、内存映射文件（\texttt{mmap} 零拷贝 I/O）、脏页追踪、用户态缺页异常处理接口（\texttt{userfaultfd}）在分布式虚拟机迁移与垃圾回收中的前沿应用。
+    \item \textbf{虚拟内存硬件的高阶服务赋能}：利用页表中断与保护位实现写时复制（COW，如 \texttt{fork()} 的极速派生）、内存映射文件（\texttt{mmap} 零拷贝 I/O）、脏页追踪、用户态缺页异常处理接口（\texttt{userfaultfd}）在分布式虚拟机迁移与垃圾回收中的前沿应用。
 \end{itemize}
 
 \subsubsection{示范性学习成果与能力指标}
@@ -328,7 +328,7 @@
     \item \textbf{[解释] 存储层次结构与成本-性能权衡}：详细阐明计算机存储体系各个层级的技术特征，并从系统工程角度论证容量、访问时延与制造成本之间的权衡规则。
     \item \textbf{[解释] 虚拟内存与分页机制原理}：高度总结虚拟内存结合底层分页机制实现物理主存弹性扩展、地址空间解耦与高效缓存的运行机理。
     \item \textbf{[评估] 存储容量与 CPU 性能协同权衡}：针对高负载计算环境，定量评估不同层级缓存容量与处理器主频对整体端到端计算吞吐的影响关系。
-    \item \textbf{[解释] 硬件 Cache 机制与侧信道安全}：阐述多级高速缓存的设计初衷，并深入剖析微架构层缓存共享如何导致跨进程侧信道（Side-channel，如 Spectre、Meltdown 漏洞）攻击的安全边界隐患。
+    \item \textbf{[解释] 硬件 Cache 机制与侧信道安全}：阐述多级高速缓存的设计初衷，并深入剖析微架构层缓存共享如何导致跨进程侧信道（如 Spectre、Meltdown 漏洞）攻击的安全边界隐患。
     \item \textbf{[开发] 局部性友好的高性能代码构建}：深入运用空间局部性与时间局部性原理，编写出兼顾页框分配与低缺页率的高效软件，彻底规避内存颠簸。
     \item \textbf{[解释] 硬件辅助内存虚拟化}：阐述底层硬件如何通过二级地址转换（SLAT，如 Intel EPT、AMD NPT）支持客户机物理地址到宿主机物理地址的高效并行翻译。
 \end{itemize}
@@ -379,12 +379,12 @@
     \item \textbf{I/O 数据缓冲技术与实现策略}：
     \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 缓解 CPU 极高计算速度与外设缓慢 I/O 数据传输之间的严重速度失配。
-        \item 单缓冲、双缓冲（Double Buffering / Ping-Pong 缓冲）与内核循环环形缓冲区。
+        \item 单缓冲、双缓冲（Ping-Pong 缓冲）与内核循环环形缓冲区。
     \end{itemize}
     \item \textbf{设备控制机制与通信模式演进}：
     \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 程序直接控制（轮询 Polled I/O）：CPU 周期严重浪费。
-        \item 中断驱动 I/O（Interrupt-Driven I/O）：异步事件驱动，但高频小包传输会诱发严重的中断风暴。
+        \item 中断驱动 I/O：异步事件驱动，但高频小包传输会诱发严重的中断风暴。
         \item 直接内存访问：DMA 控制器接管总线，直接在主存与设备缓冲区之间进行高速块数据传输，仅在整块传输结束时向 CPU 发出中断。
         \item 内存映射 I/O（MMIO）与端口独立编址 I/O（PMIO）的寻址差异；基于描述符环形队列的高性能 DMA 通信协议。
     \end{itemize}
@@ -397,7 +397,7 @@
 
 \subsubsection{选修与前沿拓展主题}
 \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
-    \item \textbf{统一设备模型与硬件抽象层（HAL）}：设备树规范、字符设备、块设备与网络套接字设备的接口统一化抽象。
+    \item \textbf{统一设备模型与硬件抽象层}（HAL）：设备树规范、字符设备、块设备与网络套接字设备的接口统一化抽象。
     \item \textbf{现代设备驱动程序工程挑战}：内核态驱动的设计原则、并发竞态、内核死锁隐患与驱动隔离沙箱技术（用户态驱动框架 UIO/VFIO）。
     \item \textbf{设备底层通信容错与高可用重试}：PCIe 总线链路层重传校验与错误报告机制。
 \end{itemize}
@@ -408,7 +408,7 @@
     \item \textbf{[解释] 操作系统分层 I/O 软件栈架构}：掌握操作系统设备管理分层模型（用户级 I/O 软件、设备独立性软件、设备驱动程序、中断处理程序、硬件控制器）。
     \item \textbf{[解释] 物理硬件与虚拟设备抽象映射}：深刻阐述操作系统如何将物理各异的异构硬件设备封装并抽象为标准的虚拟字符设备、块设备与套接字接口。
     \item \textbf{[解释] I/O 缓冲技术原理与选型}：详细阐述 I/O 数据缓冲的工作机理，并针对流式数据与块数据传输场景设计适宜的缓冲实现策略。
-    \item \textbf{[解释] 直接内存访问（DMA）机制分析}：深入论述 DMA 传输的技术优势、总线仲裁机制，并明确界定其在高速大通量数据传输中的触发条件与适用边界。
+    \item \textbf{[解释] 直接内存访问}（DMA）\textbf{机制分析}：深入论述 DMA 传输的技术优势、总线仲裁机制，并明确界定其在高速大通量数据传输中的触发条件与适用边界。
     \item \textbf{[解释] 设备驱动程序构建规范与复杂度}：阐述编写安全可靠的设备驱动程序所面临的并发陷阱，并总结现代操作系统中设备驱动开发的最佳实践与静态验证方法。
 \end{itemize}
 
@@ -417,17 +417,17 @@
 
 \subsubsection{领域核心主题}
 \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
-    \item \textbf{文件的本质概念与核心抽象}：文件作为线性逻辑地址空间的字节序列集合；文件数据（Data 内容）与文件元数据（Metadata，如 inode 中存储的大小、类型、所有者、创建时间、访问权限及数据块指针）；文件基本操作接口（\texttt{open}、\texttt{read}、\texttt{write}、\texttt{seek}、\texttt{close}）与打开模式（只读、只写、追加、独占创建）。
+    \item \textbf{文件的本质概念与核心抽象}：文件作为线性逻辑地址空间的字节序列集合；文件数据与文件元数据（如 inode 中存储的大小、类型、所有者、创建时间、访问权限及数据块指针）；文件基本操作接口（\texttt{open}、\texttt{read}、\texttt{write}、\texttt{seek}、\texttt{close}）与打开模式（只读、只写、追加、独占创建）。
     \item \textbf{文件系统的挂载机制}：将独立存储设备上的文件系统层次结构接入操作系统的统一全局目录树，形成无缝文件命名空间。
     \item \textbf{文件访问权限控制}：POSIX 标准权限位（所有者、所属组、其他人的读/写/执行权限）、访问控制列表（ACL）在文件层级的细粒度授权。
-    \item \textbf{文件共享与多进程并发安全}：硬链接（Hard Links，共享相同 inode）与符号链接/软链接（Symbolic Links，独立 inode 包含路径字符串）；跨进程并发读写与文件锁（File Locking，劝告锁 vs 强制锁）。
+    \item \textbf{文件共享与多进程并发安全}：硬链接（共享相同 inode）与符号链接/软链接（独立 inode 包含路径字符串）；跨进程并发读写与文件锁（劝告锁 vs 强制锁）。
     \item \textbf{文件块物理分配经典策略}：
     \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 连续分配：顺序读写极速，但易产生严重外部碎片且文件难以动态扩充。
         \item 链式分配：消除外部碎片，但随机寻道性能低下且指针断裂易损坏文件；显式链表文件分配表（FAT）思想。
         \item 索引分配：为每个文件配置索引节点；经典 UNIX 多级混合索引（直接指针块、一级间接块、二级间接块、三级间接块）的地址寻址极限。
     \end{itemize}
-    \item \textbf{文件系统磁盘组织与元数据布局}：引导块、超级块（Superblock，存储文件系统全局配置与元数据总览）、inode 位图、数据块位图、inode 数组表及实际数据存储块；目录项结构（线性链表、散列表、B+ 树）及多级路径名递归解析机制。
+    \item \textbf{文件系统磁盘组织与元数据布局}：引导块、超级块（存储文件系统全局配置与元数据总览）、inode 位图、数据块位图、inode 数组表及实际数据存储块；目录项结构（线性链表、散列表、B+ 树）及多级路径名递归解析机制。
     \item \textbf{磁盘块分配/释放技术对性能的影响}：内部碎片与外部碎片的成因；磁盘碎片整理与块分配局部性聚合算法。
     \item \textbf{外存空闲块管理技术}：位向量/位图法、空闲块链表法、成组链接法（UNIX 传统做法）。
     \item \textbf{目录分层实现与检索加速}：目录作为包含文件名到 inode 映射项的特殊文件；路径解析中的目录项缓存与极速检索优化。
@@ -445,9 +445,9 @@
 
 \subsubsection{领域核心主题}
 \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
-    \item \textbf{现代磁盘管理与虚拟文件系统（VFS）}：磁盘分区表（GPT/MBR）、逻辑卷管理（LVM）；虚拟文件系统（VFS）核心抽象架构：超级块对象、inode 对象、dentry 目录项对象与文件对象（\texttt{file\_operations} 虚函数指针表），向下统一纳管各类异构文件系统。
+    \item \textbf{现代磁盘管理与虚拟文件系统}（VFS）：磁盘分区表（GPT/MBR）、逻辑卷管理（LVM）；虚拟文件系统（VFS）核心抽象架构：超级块对象、inode 对象、dentry 目录项对象与文件对象（\texttt{file\_operations} 虚函数指针表），向下统一纳管各类异构文件系统。
     \item \textbf{企业级文件系统前沿技术}：Ext4、XFS、ZFS 与 Btrfs 等现代文件系统的核心架构与高并发读写特性。
-    \item \textbf{内存映射文件（mmap）机制}：将磁盘文件块直接映射至进程虚拟地址空间，读写文件转化为直接内存访问，消除系统调用与双重内核缓冲拷贝开销，支持多进程高效共享大文件。
+    \item \textbf{内存映射文件}（mmap）\textbf{机制}：将磁盘文件块直接映射至进程虚拟地址空间，读写文件转化为直接内存访问，消除系统调用与双重内核缓冲拷贝开销，支持多进程高效共享大文件。
     \item \textbf{特殊用途与虚拟伪文件系统}：\texttt{procfs}（暴露内核运行期数据结构与进程树）、\texttt{sysfs}（统一设备模型导出）、\texttt{tmpfs}/\texttt{ramfs}（高速纯内存文件系统）。
     \item \textbf{高级检索、加密与定期快照}：元数据快速索引、快照生成与异地灾备备份机制。
     \item \textbf{日志型与写时复制文件系统}：
@@ -600,7 +600,7 @@
         \item 开源客户机操作系统与开源宿主机操作系统的协同繁荣。
         \item 商业化盈利模式的历史演化：从传统盒装软件授权许可，走向订阅技术支持、开源核心与云原生托管服务。
     \end{itemize}
-    \item \textbf{操作系统生命周期终结 (EOL)的社会隐患}：
+    \item \textbf{操作系统生命周期终结} (EOL) \textbf{的社会隐患}：
     \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
         \item 停服弃用老旧系统停发安全补丁所带来的系统性安全脆弱性。
         \item 交通基础设施、医疗设备与工业控制系统因历史技术债务继续依赖 EOL 操作系统所引发的公共安全与伦理风险。
@@ -695,7 +695,7 @@
     \item \textbf{社会、伦理与专业素养议题}：4 讲授学时。
 \end{itemize}
 
-\noindent\textbf{先修课程准入依赖（来自计算机体系结构 AR 领域）：}
+\noindent\textbf{先修课程准入依赖}（来自计算机体系结构 AR 领域）：
 \begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
     \item 汇编语言与机器组织
     \item 内存管理硬件基础

@@ -9,7 +9,7 @@
 \begin{enumerate}
     \item \textbf{重命名与回归理论根基}：从 CS2013 的“算法与复杂性”拓展为“算法基础”，重新强调所有计算机专业毕业生必须牢固掌握计算理论基础（自动机、形式语言、可计算性与不可判定性）。
     \item \textbf{增设“算法与社会”核心单元}：面对算法在现代社会决策中的无所不在，专门增设该单元，系统涵盖算法偏见、公平性度量、差分隐私与绿色低能耗计算等前沿社会议题。
-    \item \textbf{与软件开发基础（SDF）的协同映射}：明确划分了初级数据结构应用与高级算法分析的边界，形成循序渐进的进阶路径。
+    \item \textbf{与软件开发基础}（SDF）\textbf{的协同映射}：明确划分了初级数据结构应用与高级算法分析的边界，形成循序渐进的进阶路径。
 \end{enumerate}
 \end{preamblebox}
 
@@ -43,7 +43,7 @@
 
 \subsubsection{计算机核心主题}
 \begin{itemize}
-    \item \textbf{抽象数据类型 (ADT)}：包（Bag）、容器、字典（Dictionary）、列表（List）与集合（Set）的代数规范与行为不变量。
+    \item \textbf{抽象数据类型} (ADT)：包、容器、字典、列表与集合的代数规范与行为不变量。
     \item \textbf{数组与线性表}：一维与多维数组存储映射；线性查找与二分查找算法及其边界条件。
     \item \textbf{链表结构}：单向链表、双向链表、循环链表及其指针操作安全性与内存局部性特征。
     \item \textbf{栈与队列}：后进先出（LIFO）与先进先出（FIFO）机制、双端队列、基于堆的优先队列。
@@ -54,7 +54,7 @@
         \item 二叉树、多叉树、二叉搜索树（BST）及其前序、中序、后序与层序遍历。
         \item 平衡二叉树与多路平衡树原理：AVL 树、红黑树、2-3 树、B 树/B+ 树的核心旋转与重平衡机制。
         \item 堆结构（最大堆/最小堆）与其在优先队列中的工程实现。
-        \item 编码与贪心应用：霍夫曼树与霍夫曼编码（Huffman Coding）。
+        \item 编码与贪心应用：霍夫曼树与霍夫曼编码。
     \end{itemize}
     \item \textbf{经典排序算法族}：
     \begin{itemize}
@@ -74,7 +74,7 @@
     \item \textbf{现代核心交叉技术}：
     \begin{itemize}
         \item 密码学基础散列与非对称基础（SHA-256、RSA 的数论支撑与实现逻辑）。
-        \item 差分隐私（Differential Privacy）在聚合统计算法中的注入机制。
+        \item 差分隐私在聚合统计算法中的注入机制。
         \item 算法不变量的形式化证明与前置/后置条件。
     \end{itemize}
 \end{itemize}
@@ -83,7 +83,7 @@
 \begin{itemize}
     \item \textbf{领域核心}：
     \begin{itemize}
-        \item 分布式共识算法（Consensus Algorithms，如 Paxos、Raft、区块链工作量证明 PoW 与权益证明 PoS 机制）。
+        \item 分布式共识算法（如 Paxos、Raft、区块链工作量证明 PoW 与权益证明 PoS 机制）。
         \item 计算几何基础（凸包 Graham 扫描法、最近点对分治求解）。
         \item 运筹与线性规划（Simplex 单纯形法与对偶原理）。
         \item 近似算法（针对背包问题、旅行商 TSP 的常数比例近似）。
@@ -93,7 +93,7 @@
     \begin{itemize}
         \item 量子计算算法（Deutsch-Jozsa、Shor 大数质因数分解、Grover 数据库量子搜索）。
         \item 信号处理算法（快速傅里叶变换 FFT、离散卷积计算）。
-        \item 遗传算法与演化计算（Genetic Algorithms、群体智能优化）。
+        \item 遗传算法与演化计算（含群体智能优化）。
     \end{itemize}
 \end{itemize}
 
@@ -116,7 +116,7 @@
     \item \textbf{动态规划}：最优子结构与重叠子问题、备忘录自顶向下法与制表自底向上法（典型范例：最长公共子序列 LCS、背包问题、Floyd 算法）。
     \item \textbf{贪心策略}：贪心选择性质与无后效性证明（典型范例：哈夫曼编码、Dijkstra 最短路、Kruskal 最小生成树）。
     \item \textbf{回溯法与分支限界法}：状态剪枝、Alpha-Beta 剪枝与组合优化边界估算。
-    \item \textbf{时空权衡与化归策略 (Space-Time Tradeoff \& Reduction)}：以空间换时间（散列表、预处理排序）与问题规约转化（2-3树转换、图问题向网络流转化）。
+    \item \textbf{时空权衡与化归策略}：以空间换时间（散列表、预处理排序）与问题规约转化（2-3树转换、图问题向网络流转化）。
 \end{itemize}
 
 \subsection{计算复杂性分析}
@@ -127,7 +127,7 @@
     \item \textbf{渐进记号体系}：$O$（渐进上界）、$\Omega$（渐进下界）、$\Theta$（紧确界）、$o$ 与 $\omega$ 的严谨数学定义及极限证明。
     \item \textbf{基础时间复杂度阶}：常数阶 $O(1)$、对数阶 $O(\log n)$、线性阶 $O(n)$、线性对数阶 $O(n \log n)$、多项式阶 $O(n^k)$、指数阶 $O(2^n)$、阶乘阶 $O(n!)$。
     \item \textbf{递推关系式求解}：主定理三大分支条件推导与应用、代入归纳法、递归树分析法。
-    \item \textbf{均摊分析}：聚合分析、记账法、势能法（Potential Method，如动态扩容数组分析）。
+    \item \textbf{均摊分析}：聚合分析、记账法、势能法（如动态扩容数组分析）。
     \item \textbf{难解性与计算复杂性理论}：
     \begin{itemize}
         \item 判定问题与搜索问题的多项式时间可解性（类 P）。
@@ -144,8 +144,8 @@
 \begin{itemize}
     \item \textbf{有穷自动机与正则语言}：确定性有穷自动机 (DFA)、非确定性有穷自动机 (NFA)、子集构造法等价转化、正则表达式与正则文法、泵引理 及其不可正则性证明。
     \item \textbf{上下文无关文法与下推自动机}：上下文无关文法产生式、语法分析树与歧义性、下推自动机 (PDA) 的栈式存储模型、非上下文无关语言的泵引理。
-    \item \textbf{图灵机与丘奇-图灵论题 (Turing Machines \& Church-Turing Thesis)}：标准单带图灵机形式化定义、多带/非确定性图灵机等价性、通用图灵机、丘奇-图灵论题的深刻内涵。
-    \item \textbf{可计算性与不可判定性 (Computability \& Undecidability)}：图灵可识别与图灵可判定语言、对角线法证明不可数性、停机问题 的不可判定性严密反证法、波斯特对应问题 (PCP) 与莱斯定理 (Rice's Theorem)。
+    \item \textbf{图灵机与丘奇-图灵论题}：标准单带图灵机形式化定义、多带/非确定性图灵机等价性、通用图灵机、丘奇-图灵论题的深刻内涵。
+    \item \textbf{可计算性与不可判定性}：图灵可识别与图灵可判定语言、对角线法证明不可数性、停机问题 的不可判定性严密反证法、波斯特对应问题 (PCP) 与莱斯定理 (Rice's Theorem)。
 \end{itemize}
 
 \subsection{算法与社会伦理}
@@ -154,7 +154,7 @@
 \begin{itemize}
     \item \textbf{算法偏见与歧视}：训练数据历史偏见与算法反馈循环；招聘筛选、司法量刑、信贷审批算法中的不公诱因与防范机制。
     \item \textbf{算法公平性度量标准}：人口统计学一致性、均等化赔率、预测均等 及其内在的数学互斥性定理。
-    \item \textbf{透明度、可解释性与知情权 (Explainability \& Right to Explanation)}：黑箱算法决策的审计追踪、模型决策证据生成机制。
+    \item \textbf{透明度、可解释性与知情权}：黑箱算法决策的审计追踪、模型决策证据生成机制。
     \item \textbf{绿色计算与算法能耗}：大型模型训练与高并发图计算的碳排放评估、算力节约型与能耗感知型算法设计。
 \end{itemize}
 
@@ -185,7 +185,7 @@
 \begin{enumerate}
     \item \textbf{CS1：计算机编程基础 I}（涵盖基础数组、字符串查找、基础对象与迭代遍历，渗透初阶时空直觉）。
     \item \textbf{CS2：面向对象与数据结构}（15 学时覆盖单/双链表、栈、队列、哈希表、二叉平衡树、快速排序、归并排序、SHA-256 算法及 2 学时算法社会学）。
-    \item \textbf{CS3：算法分析与计算理论综合课 (Algorithms \& Computation)}（以 16 学时高阶图论、动态规划、NPC 理论结合 9 学时计算模型与自动机基础）。
+    \item \textbf{CS3：算法分析与计算理论综合课}（以 16 学时高阶图论、动态规划、NPC 理论结合 9 学时计算模型与自动机基础）。
 \end{enumerate}
 
 \subsection{四门课深化方案 (面向研究型与深层次理论方向)}

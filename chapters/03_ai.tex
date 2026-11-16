@@ -126,7 +126,7 @@ $^\ddagger$注：计算机核心总学时为 11 学时（由 AI 独立承担）�
         \item 广度优先搜索 (BFS)及其在无权最优路径求解中的应用；
         \item 深度优先搜索 (DFS)及其内存优势；
         \item 迭代加深深度优先搜索 (IDS)的完备性与时空折中；
-        \item 一致代价搜索（Uniform Cost Search, UCS / 广义 Dijkstra 算法）。
+        \item 一致代价搜索（UCS / 广义 Dijkstra 算法）。
     \end{itemize}
     \item \textbf{启发式/有信息图搜索技术}：
     \begin{itemize}
@@ -160,7 +160,7 @@ $^\ddagger$注：计算机核心总学时为 11 学时（由 AI 独立承担）�
         \item 动态不确定搜索空间建模；
         \item 复杂搜索地形拓扑（鞍点 Saddle Points、高维平坦高原 Plateau、狭窄山脊 Ridges 等）。
     \end{itemize}
-    \item \textbf{约束满足问题 (CSP)}：约束图表示、回溯搜索、前向检验与弧相容算法（AC-3）。
+    \item \textbf{约束满足问题} (CSP)：约束图表示、回溯搜索、前向检验与弧相容算法（AC-3）。
     \item \textbf{禁忌搜索}：短时禁忌表与特赦准则。
     \item \textbf{内存受限与高阶 A* 变体}：IDA*（迭代加深 A*）、SMA*（简化内存受限 A*）、RBFS（递归最佳优先搜索）。
     \item \textbf{双人博弈高级专题}：地平线效应与静态搜索；开局库与残局完备解库；博弈弱解与强解的数学定义（如西洋跳棋 Checkers 已被完全弱解）。
@@ -170,7 +170,7 @@ $^\ddagger$注：计算机核心总学时为 11 学时（由 AI 独立承担）�
     \begin{itemize}
         \item 模拟退火算法与 Metropolis 接受准则、降温调度表设计；
         \item 遗传算法：染色体编码、轮盘赌选择、交叉、变异与适应度函数；
-        \item 蒙特卡洛树搜索 (MCTS)：选择、扩展、模拟与反向传播（Backpropagation / UCB1 策略）。
+        \item 蒙特卡洛树搜索 (MCTS)：选择、扩展、模拟与反向传播（UCB1 策略）。
     \end{itemize}
 \end{itemize}
 
@@ -202,7 +202,7 @@ $^\ddagger$注：计算机核心总学时为 11 学时（由 AI 独立承担）�
         \item 学习驱动的亚符号表示：低维稠密向量与连续嵌入表示；
         \item 概率图模型初阶：朴素贝叶斯模型与贝叶斯信念网络直观拓扑。
     \end{itemize}
-    \item \textbf{概率推理回顾与贝叶斯定理}：先验概率、后验概率、似然度；贝叶斯定理（Bayes' Theorem）的形式化陈述（与 MSF 离散概率交叉）。
+    \item \textbf{概率推理回顾与贝叶斯定理}：先验概率、后验概率、似然度；贝叶斯定理的形式化陈述（与 MSF 离散概率交叉）。
     \item \textbf{贝叶斯推理基础}：基于观测证据进行假设后验概率计算与置信度更新。
 \end{itemize}
 
@@ -235,7 +235,7 @@ $^\ddagger$注：计算机核心总学时为 11 学时（由 AI 独立承担）�
 \begin{itemize}
     \item \textbf{机器学习任务的核心范式与定义}：
     \begin{itemize}
-        \item 监督学习：分类（Classification，离散标签预测）与回归（Regression，连续数值预测）；
+        \item 监督学习：分类（离散标签预测）与回归（连续数值预测）；
         \item 强化学习：智能体与环境通过“状态-动作-奖励”闭环试错交互学习最优策略；
         \item 无监督学习：聚类分析、数据降维与密度估计。
     \end{itemize}
@@ -267,8 +267,8 @@ $^\ddagger$注：计算机核心总学时为 11 学时（由 AI 独立承担）�
     \item \textbf{特征与假设表示}：
     \begin{itemize}
         \item 假设空间及其容量复杂度；
-        \item 简单的基特征扩展（Basis Feature Expansion，如单变量二次方项特征构造）；
-        \item 自动学习得到的特征表示（Learned Feature Representations / 特征表示学习）。
+        \item 简单的基特征扩展（如单变量二次方项特征构造）；
+        \item 自动学习得到的特征表示（特征表示学习）。
     \end{itemize}
     \item \textbf{严谨的机器学习评估方法论}：
     \begin{itemize}
@@ -311,7 +311,7 @@ $^\ddagger$注：计算机核心总学时为 11 学时（由 AI 独立承担）�
         \item 分类高级指标（精确率、召回率、PR 曲线、Macro/Micro 平均）；
         \item 回归模型评估指标（均方误差 MSE、均方根误差 RMSE、平均绝对误差 MAE、$R^2$ 判定系数）；
         \item 混淆矩阵的构建与诊断；
-        \item 交叉验证（Cross-Validation，如 $k$ 折交叉验证）；
+        \item 交叉验证（如 $k$ 折交叉验证）；
         \item 结合交叉验证的网格搜索与随机搜索超参数调优。
     \end{itemize}
     \item \textbf{强化学习全景概览}：状态空间、动作空间、即时奖励、折扣因子、价值函数与 Q 学习直观机理。
@@ -353,22 +353,22 @@ $^\ddagger$注：计算机核心总学时为 11 学时（由 AI 独立承担）�
     \item \textbf{无监督聚类前沿}：$K$-均值聚类（$K$-Means）及其 $K$-Means++ 初始化；高斯混合模型（GMM）；自组织特征映射网络（SOM）。
     \item \textbf{半监督学习与弱监督学习}：伪标签技术与一致性正则化。
     \item \textbf{概率图模型进阶}：马尔可夫随机场（MRF）与因果推断图。
-    \item \textbf{集成学习高级范式}：自举汇聚法、提升法（Boosting / AdaBoost、GBDT、XGBoost、LightGBM）、随机森林与门控专家混合模型。
+    \item \textbf{集成学习高级范式}：自举汇聚法、提升法（AdaBoost、GBDT、XGBoost、LightGBM）、随机森林与门控专家混合模型。
     \item \textbf{统计学习理论极限}：为什么机器能够实现泛化；VC 维（Vapnik-Chervonenkis Dimension）；Rademacher 复杂度；概率近似正确（PAC）理论框架与泛化误差界。
     \item \textbf{强化学习前沿理论}：
     \begin{itemize}
-        \item 探索与利用权衡（Exploration vs. Exploitation Trade-off，多臂老虎机模型）；
+        \item 探索与利用权衡（多臂老虎机模型）；
         \item 马尔可夫决策过程（MDP）严格数学规范与贝尔曼最优方程；
         \item 动态规划求解：价值迭代与策略迭代；
         \item 无模型强化学习：时间差分学习 TD($\lambda$)、Q-Learning、SARSA；
-        \item 策略梯度方法（Policy Gradient Methods / REINFORCE 算法）；
-        \item 深度强化学习（Deep Q-Networks / DQN、Actor-Critic 架构、PPO 近端策略优化算法）。
+        \item 策略梯度方法（REINFORCE 算法）；
+        \item 深度强化学习（DQN、Actor-Critic 架构、PPO 近端策略优化算法）。
     \end{itemize}
     \item \textbf{推荐系统架构}：基于用户的协同过滤、矩阵分解（SVD）、图神经推荐算法。
     \item \textbf{机器学习专用计算硬件}：GPU 体系结构与 CUDA 并行加速、TPU 张量处理器、混合精度训练与分布式数据并行（DDP）。
     \item \textbf{多行业实战专题}：医学影像诊断、量化经济分析、智能辅导教育、计算机视觉目标检测、机器翻译 NLP、具身机器人、复杂博弈对抗。
     \item \textbf{数据挖掘深度交叉}：关联规则挖掘（Apriori 算法）、高维时序序列模式挖掘。
-    \item \textbf{可信与可解释性人工智能 (Trustworthy \& Explainable AI, XAI)}：
+    \item \textbf{可信与可解释性人工智能} (XAI)：
     \begin{itemize}
         \item 数据集、算法与评估偏见的深度数学审计；
         \item 差分隐私联邦学习安全保护框架；
@@ -422,7 +422,7 @@ $^\ddagger$注：计算机核心总学时为 11 学时（由 AI 独立承担）�
     \item \textbf{前沿深度生成式模型}：
     \begin{itemize}
         \item 深度图像生成扩散模型（如截至 2023 年以来的 DALL-E、Midjourney、Stable Diffusion 等）：高层生成扩散原理、工业级商业赋能场景、版权争议、伪造滥用风险及其生成失效短板；
-        \item 大语言模型（Large Language Models, LLMs，如截至 2023 年以来的 ChatGPT、Bard/Gemini 等）：自回归预训练与指令微调原理、工业级应用落地、事实性幻觉、安全对齐缺陷与逻辑推理脆弱性。
+        \item 大语言模型（LLMs，如截至 2023 年以来的 ChatGPT、Bard/Gemini 等）：自回归预训练与指令微调原理、工业级应用落地、事实性幻觉、安全对齐缺陷与逻辑推理脆弱性。
     \end{itemize}
     \item \textbf{人工智能深远社会影响与多维治理}：
     \begin{itemize}
@@ -463,7 +463,7 @@ $^\ddagger$注：计算机核心总学时为 11 学时（由 AI 独立承担）�
     \item \textbf{逻辑程序设计}：Prolog 语言推理机制、答案集编程 (ASP)。
     \item \textbf{基于规则的专家系统}：产生式系统与 Rete 匹配算法。
     \item \textbf{语义网络} 与概念图。
-    \item \textbf{基于模型的推理与基于案例的推理 (Model-based \& Case-based Reasoning, CBR)}。
+    \item \textbf{基于模型的推理与基于案例的推理} (CBR)。
 \end{itemize}
 
 \subsubsection{示范性学习成果与能力目标}
@@ -497,15 +497,15 @@ $^\ddagger$注：计算机核心总学时为 11 学时（由 AI 独立承担）�
         \item 精确概率推断及其计算复杂度：变量消去法、团树算法以及精确推断的 NP-难性证明；
         \item 马尔可夫毯与有向分离定理（$d$-Separation）；
         \item 随机采样与近似推断：直接采样、拒绝采样、似然加权采样、马尔可夫链蒙特卡洛算法（MCMC，如 Gibbs 采样）；
-        \item 马尔可夫网络（Markov Networks / 马尔可夫随机场 MRF）：无向图模型、势函数与吉布斯分布；
-        \item 关系概率模型（Relational Probability Models / 统计关系学习）；
+        \item 马尔可夫网络（马尔可夫随机场 MRF）：无向图模型、势函数与吉布斯分布；
+        \item 关系概率模型（统计关系学习）；
         \item 隐马尔可夫模型 (HMM)：前向-后向算法、Viterbi 最优路径解码算法与 Baum-Welch 参数学习算法。
     \end{itemize}
     \item \textbf{决策论高级专题}：
     \begin{itemize}
         \item 风险偏好公理与效用函数构造；
         \item 最大期望效用原则 (MEU)；
-        \item 影响图（Influence Diagrams / 决策网络）。
+        \item 影响图（决策网络）。
     \end{itemize}
 \end{itemize}
 
@@ -540,7 +540,7 @@ $^\ddagger$注：计算机核心总学时为 11 学时（由 AI 独立承担）�
     \item \textbf{基于马尔可夫决策过程的规划}。
     \item \textbf{闭环规划与动态重规划体系}：
     \begin{itemize}
-        \item 条件规划（Conditional Planning / 感知-动作协同交织）；
+        \item 条件规划（感知-动作协同交织）；
         \item 连续规划；
         \item 概率规划。
     \end{itemize}
@@ -561,10 +561,10 @@ $^\ddagger$注：计算机核心总学时为 11 学时（由 AI 独立承担）�
 
 \subsubsection{选修主题详细大纲}
 \begin{itemize}
-    \item \textbf{智能体经典架构体系}：简单反应式架构、分层包容架构、认知架构（Cognitive Architectures，如 BDI、ACT-R、SOAR）。
+    \item \textbf{智能体经典架构体系}：简单反应式架构、分层包容架构、认知架构（如 BDI、ACT-R、SOAR）。
     \item \textbf{智能体形式化理论}：信念-愿望-意图（BDI）多模态逻辑系统、智能体状态的形式化定义。
     \item \textbf{理性决策与博弈论}：纳什均衡、占优策略、零和博弈与非零和博弈。
-    \item \textbf{决策论智能体与马尔可夫决策过程 (MDP)}。
+    \item \textbf{决策论智能体与马尔可夫决策过程} (MDP)。
     \item \textbf{软件智能体与智能助手}：个人虚拟助手、信息检索与过滤智能体。
     \item \textbf{协作智能体与信息搜集智能体}。
     \item \textbf{拟真与情感智能体}：虚拟合成角色、智能体情绪建模与拟人化交互。
@@ -572,8 +572,8 @@ $^\ddagger$注：计算机核心总学时为 11 学时（由 AI 独立承担）�
     \item \textbf{多智能体系统}：
     \begin{itemize}
         \item 协作多智能体系统与智能体团队编队协作；
-        \item 竞争性智能体交互机制：拍卖机制（Auctions，如英式拍卖、荷式拍卖、维克里第二价格拍卖）、投票协议与社会选择理论；
-        \item 群体智能系统与生物启发式模型（Swarm Systems，如蚁群算法、粒子群优化算法 PSO）；
+        \item 竞争性智能体交互机制：拍卖机制（如英式拍卖、荷式拍卖、维克里第二价格拍卖）、投票协议与社会选择理论；
+        \item 群体智能系统与生物启发式模型（如蚁群算法、粒子群优化算法 PSO）；
         \item 多智能体强化学习 (MARL)。
     \end{itemize}
     \item \textbf{人-智能体交互与协作}：混合主动性协同决策。
@@ -600,7 +600,7 @@ $^\ddagger$注：计算机核心总学时为 11 学时（由 AI 独立承担）�
     \item \textbf{文法体系}：确定性文法与随机/统计文法。
     \item \textbf{句法分析算法}：
     \begin{itemize}
-        \item 上下文无关文法与图表句法分析器（Chart Parsers，如 CYK 动态规划算法）；
+        \item 上下文无关文法与图表句法分析器（如 CYK 动态规划算法）；
         \item 概率上下文无关文法与带权 CYK 语法分析树推导。
     \end{itemize}
     \item \textbf{语义表示与语义理解}：
@@ -613,7 +613,7 @@ $^\ddagger$注：计算机核心总学时为 11 学时（由 AI 独立承担）�
     \item \textbf{语料库驱动的统计 NLP 方法}：
     \begin{itemize}
         \item $N$-元文法语言模型（$N$-grams）与隐马尔可夫模型（HMM）；
-        \item 概率平滑与回退策略（Backoff，如 Good-Turing 平滑、Kneser-Ney 平滑）；
+        \item 概率平滑与回退策略（如 Good-Turing 平滑、Kneser-Ney 平滑）；
         \item 核心应用实战：词性标注与形态学词法分析。
     \end{itemize}
     \item \textbf{信息检索与抽取}：
@@ -631,7 +631,7 @@ $^\ddagger$注：计算机核心总学时为 11 学时（由 AI 独立承担）�
         \item 循环神经网络（RNN、LSTM、GRU）的时序语义建模；
         \item 变换器自注意力架构（Transformers / 多头自注意力 Multi-head Attention、位置编码 Positional Encoding）；
         \item 预训练语言模型演进（BERT 双向自编码器、GPT 自回归解码器、T5 统一序列到序列架构）；
-        \item 多模态图文联合嵌入（Multi-modal Embeddings，如 CLIP 跨模态表征对齐）；
+        \item 多模态图文联合嵌入（如 CLIP 跨模态表征对齐）；
         \item 生成式大语言模型与提示词工程。
     \end{itemize}
 \end{itemize}
@@ -669,7 +669,7 @@ $^\ddagger$注：计算机核心总学时为 11 学时（由 AI 独立承担）�
         \item 齐次变换矩阵、旋转矩阵与四元数运算。
     \end{itemize}
     \item \textbf{构型空间与环境地图}：构型空间维度、障碍物在 C-空间的膨胀映射、工作空间向构型空间的转换。
-    \item \textbf{不确定性传感数据融合与状态估计}：卡尔曼滤波、扩展卡尔曼滤波（EKF）、粒子滤波（Particle Filter / 蒙特卡洛定位 MCL）。
+    \item \textbf{不确定性传感数据融合与状态估计}：卡尔曼滤波、扩展卡尔曼滤波（EKF）、粒子滤波（蒙特卡洛定位 MCL）。
     \item \textbf{自主移动机器人关键导航技术}：
     \begin{itemize}
         \item 同时定位与建图 (SLAM)；
@@ -865,7 +865,7 @@ $^\ddagger$注：计算机核心总学时为 11 学时（由 AI 独立承担）�
 
 \begin{taskbox}[任务 2：不确定环境下双人博弈策略智能体]
 \textbf{【任务情境】}：设计一个在复杂双人零和对抗博弈（如包含随机抽卡或掷骰子机会事件的棋盘游戏，或带有突发价格波动与信息不完全的战略采购博弈）中能够自主做出全局最优决策的博弈智能体。\\
-\textbf{【能力陈述】}：熟练构建带有 Alpha-Beta 剪枝的极小化极大算法（Minimax with $\alpha$-$\beta$ Pruning），引入处理随机不确定性概率动作的期望机会节点，并在指定搜索深度处设计合理的启发式局面估值函数，开发并部署一个能在不确定对抗环境下具备高胜率对抗水平的智能博弈决策引擎。\\
+\textbf{【能力陈述】}：熟练构建带有 Alpha-Beta 剪枝的极小化极大算法，引入处理随机不确定性概率动作的期望机会节点，并在指定搜索深度处设计合理的启发式局面估值函数，开发并部署一个能在不确定对抗环境下具备高胜率对抗水平的智能博弈决策引擎。\\
 \textbf{【能力领域】}：应用 \quad \textbf{【能力单元】}：需求分析 / 架构设计 / 软件开发 / 仿真测试 / 生产部署\\
 \textbf{【所需知识单元】}：人工智能/搜索算法与问题求解、人工智能/知识表示与推理基础\\
 \textbf{【认知与技能要求】}：\textbf{应用 / 开发} \quad \textbf{【核心要求】}：领域核心
